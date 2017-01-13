@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+
+BIN_NAME=$(basename "$0")
+COMMAND_NAME=$1
+SUB_COMMAND_NAME=$2
+
+sub_help () {
+  echo "Usage: $BIN_NAME <command>"
+  echo
+  echo "Commands:"
+  echo "   help             This help message"
+  echo "   update           Update packages and pkg managers (OS, brew, npm, yarn, commposer)"
+  echo "   clean            Clean up caches (brew, npm, composer)"
+}
+
+sub_update () {
+  sudo softwareupdate -i -a
+  brew update
+  brew upgrade
+  npm install npm -g
+  npm update -g
+  # yarn is currently broken so it needs to be updated manualy
+  # yarn self-update
+  composer self-update
+}
+
+sub_clean () {
+  brew cleanup
+  brew cask cleanup
+  npm cache clean
+  yarn cache clean
+  composer clear-cache
+}
+
+sub_completion () {
+  echo "help update clean"
+}
+
+case $COMMAND_NAME in
+  "" | "-h" | "--help")
+    sub_help
+    ;;
+  *)
+    shift
+    sub_${COMMAND_NAME} $@
+    if [ $? = 127 ]; then
+      echo "'$COMMAND_NAME' is not a known command or has errors." >&2
+      sub_help
+      exit 1
+    fi
+    ;;
+esac

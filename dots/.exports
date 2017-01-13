@@ -1,0 +1,6 @@
+eval "$(thefuck --alias)"
+
+export EDITOR=nano
+export PATH=/opt/subversion/bin:$PATH
+export PATH=/usr/local/bin:$PATH
+export PATH="$PATH:$HOME/.composer/vendor/bin"

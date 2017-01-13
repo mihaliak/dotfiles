@@ -1,0 +1,5 @@
+[
+	{ "keys": ["ctrl+q"], "command": "toggle_comment", "args": { "block": true } },
+	{ "keys": ["super+1"], "command": "toggle_side_bar" },
+	{ "keys": ["ctrl+d"], "command": "duplicate_line" },
+]

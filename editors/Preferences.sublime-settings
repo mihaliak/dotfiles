@@ -1,0 +1,24 @@
+{
+	"always_show_minimap_viewport": true,
+	"auto_complete": false,
+	"bold_folder_labels": true,
+	"color_scheme": "Packages/ayu/ayu-mirage.tmTheme",
+	"enable_tab_scrolling": false,
+	"font_size": 14,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"line_padding_bottom": 3,
+	"line_padding_top": 3,
+	"overlay_scroll_bars": "enabled",
+	"theme": "ayu-mirage.sublime-theme",
+	"ui_big_tabs": false,
+	"word_wrap": false
+}
