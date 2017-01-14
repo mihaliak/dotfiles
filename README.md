@@ -1,5 +1,5 @@
-# Dotfiles - WIP
-This dotfiles are WIP, use at your own risk.
+# Dotfiles
+Dotfiles I use with my Mac OS Sierra
 
 ## Install
 
@@ -8,9 +8,12 @@ On fresh installation of MacOS:
     sudo softwareupdate -i -a
     xcode-select --install
 
-Install dotfiles:
-
-    cd ~/dotfiles && ./install.sh
+Clone and install dotfiles:
+	
+	git clone https://github.com/mihaliak/dotfiles.git ~/dotfiles
+    cd ~/dotfiles
+    chmod +w install.sh
+    ./install.sh
 
 Import PhpStorm settings in editor.
 

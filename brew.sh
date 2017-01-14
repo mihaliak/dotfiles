@@ -36,10 +36,8 @@ brew tap caskroom/versions
 # Install cask packages
 
 brew cask install --appdir="/Applications" alfred
-brew cask install --appdir="/Applications" firefox
 brew cask install --appdir="/Applications" flux
 brew cask install --appdir="/Applications" google-chrome
-brew cask install --appdir="/Applications" opera
 brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" spotify
 brew cask install --appdir="/Applications" sublime-text
