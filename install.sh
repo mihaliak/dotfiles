@@ -24,3 +24,6 @@ ln -sfv "$DOTFILES_DIR/dots/.bash_profile" ~
 # Copy sublime settings
 cp "$DOTFILES_DIR/editors/Default (OSX).sublime-keymap" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap"
 cp "$DOTFILES_DIR/editors/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+
+# Clear cache
+. "$DOTFILES_DIR/bin/dotfiles" clean
