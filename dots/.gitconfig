@@ -10,6 +10,8 @@
 
 [alias]
   a = "add ."
+  c = commit
+  p = push
   s = status
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   m = !"bash -c 'git branch | grep -v 'master' | xargs git branch -D'"
