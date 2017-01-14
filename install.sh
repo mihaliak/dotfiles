@@ -20,6 +20,7 @@ ln -sfv "$DOTFILES_DIR/dots/.bash_profile" ~
 
 # Setup macos defaults and add apps to dock
 . "$DOTFILES_DIR/macos/defaults.sh"
+. "$DOTFILES_DIR/macos/dock.sh"
 
 # Copy sublime settings
 cp "$DOTFILES_DIR/editors/Default (OSX).sublime-keymap" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap"
