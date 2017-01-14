@@ -8,31 +8,25 @@ brew update
 brew upgrade
 
 # Install packages
-
-apps=(
-  htop
-  iftop
-  openssl
-  tig
-  composer
-  httpie
-  nmap
-  php70
-  youtube-dl
-  git
-  subversion
-  node
-  python3
-  thefuck
-  wget
-  yarn
-  zsh
-  zsh-completions
-  dark-mode
-)
-
-brew install "${apps[@]}"
-
+brew install dockutil
+brew install htop
+brew install iftop
+brew install openssl
+brew install tig
+brew install composer
+brew install httpie
+brew install nmap
+brew install php70
+brew install youtube-dl
+brew install git
+brew install subversion
+brew install node
+brew install python3
+brew install thefuck
+brew install wget
+brew install yarn
+brew install zsh
+brew install zsh-completions
 
 # Cask
 brew tap caskroom/cask
@@ -41,31 +35,27 @@ brew tap caskroom/versions
 
 # Install cask packages
 
-casks=(
-  alfred
-  firefox
-  flux
-  google-chrome
-  opera
-  slack
-  spotify
-  sublime-text3
-  virtualbox
-  vagrant
-  vlc
-  phpstorm
-  sequel-pro
-  filezilla
-  postman
-  iterm2
-  teamviewer
-  lastpass
-  spectacle
-  appcleaner
-  skype
-)
-
-brew cask install "${casks[@]}"
+brew cask install --appdir="/Applications" alfred
+brew cask install --appdir="/Applications" firefox
+brew cask install --appdir="/Applications" flux
+brew cask install --appdir="/Applications" google-chrome
+brew cask install --appdir="/Applications" opera
+brew cask install --appdir="/Applications" slack
+brew cask install --appdir="/Applications" spotify
+brew cask install --appdir="/Applications" sublime-text
+brew cask install --appdir="/Applications" virtualbox
+brew cask install --appdir="/Applications" vagrant
+brew cask install --appdir="/Applications" vlc
+brew cask install --appdir="/Applications" phpstorm
+brew cask install --appdir="/Applications" sequel-pro
+brew cask install --appdir="/Applications" filezilla
+brew cask install --appdir="/Applications" postman
+brew cask install --appdir="/Applications" iterm2
+brew cask install --appdir="/Applications" teamviewer
+brew cask install --appdir="/Applications" lastpass
+brew cask install --appdir="/Applications" spectacle
+brew cask install --appdir="/Applications" appcleaner
+brew cask install --appdir="/Applications" skype
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package

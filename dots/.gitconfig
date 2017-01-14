@@ -9,6 +9,8 @@
   excludesfile = ~/.gitignore_global
 
 [alias]
+  a = "add ."
+  s = status
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   m = !"bash -c 'git branch | grep -v 'master' | xargs git branch -D'"
   nah = !"bash -c 'git reset --hard && git clean -df'"
