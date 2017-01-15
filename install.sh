@@ -9,6 +9,7 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 sudo chsh -s $(which zsh)
 
 # Bunch of symlinks
+ln -sfv "$DOTFILES_DIR/dots/.hushlogin" ~
 ln -sfv "$DOTFILES_DIR/dots/.exports" ~
 ln -sfv "$DOTFILES_DIR/dots/.functions" ~
 ln -sfv "$DOTFILES_DIR/dots/.extra" ~
