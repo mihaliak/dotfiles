@@ -24,7 +24,7 @@ On fresh installation of MacOS:
 
 Clone and install dotfiles:
 	
-	  git clone https://github.com/mihaliak/dotfiles.git ~/dotfiles
+    git clone https://github.com/mihaliak/dotfiles.git ~/dotfiles
     cd ~/dotfiles
     chmod +w install.sh
     ./install.sh
