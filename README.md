@@ -4,47 +4,16 @@ Dotfiles I use with MacOS Sierra mostly for Web Development.
 ![iTerm.app](https://raw.github.com/mihaliak/dotfiles/master/iterm/screenshot.png)
 
 Contains:
-  1. Packages / CLI
-    - brew & brew cask
-    - dockutil
-    - htop
-    - iftop
-    - openssl
-    - tig
-    - composer
-    - httpie
-    - nmap
-    - php70
-    - git
-    - subversion
-    - node
-    - python3
-    - thefuck
-    - wget
-    - yarn
-    - zsh
-    - zsh-completions
-
-  2. Applications
-    - alfred
-    - flux
-    - google-chrome
-    - slack
-    - spotify
-    - sublime-text
-    - virtualbox
-    - vagrant
-    - vlc
-    - phpstorm
-    - sequel-pro
-    - filezilla
-    - postman
-    - iterm2
-    - teamviewer
-    - lastpass
-    - spectacle
-    - appcleaner
-    - skype
+  1. System defaults
+  2. [Git config with aliases](https://github.com/mihaliak/dotfiles/blob/master/dots/.gitconfig), [Git global ignore](https://github.com/mihaliak/dotfiles/blob/master/dots/.gitignore_global)
+  3. [Global aliases](https://github.com/mihaliak/dotfiles/blob/master/dots/.aliases) 
+  4. [Functions](https://github.com/mihaliak/dotfiles/blob/master/dots/.functions) for homestead, colored `man` page, `mk` for making folder and entering it
+  5. Custom [/etc/hosts](https://github.com/mihaliak/dotfiles/blob/master/etc/hosts) file with blocked Ads, Trackers & 🔥 stuff on internet
+  6. `Inconsolata` font used in iTerm, PhpStorm, Sublime
+  7. iTerm profile, oh-my-zsh taybalt theme
+  8. `ssh_list_alises`, `ssh_new_alias`, `ssh_rm_alias` commands to manage ssh config hosts and creating / transfering pub key to server
+  9. Packages / CLI (brew, brew cask, dockutil, htop, iftop, openssl, tig, composer, httpie, nmap, php70, git, subversion, node, python3, thefuck, wget, yarn, zsh, zsh-completions)
+  10. Applications (alfred, flux, google-chrome, slack, spotify, sublime-text, virtualbox, vagrant, vlc, phpstorm, sequel-pro, filezilla, postman, iterm2, teamviewer, lastpass, spectacle, appcleaner, skype)
 
 ## Install
 
