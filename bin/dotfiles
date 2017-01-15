@@ -10,7 +10,7 @@ sub_help () {
   echo "Commands:"
   echo "   help             This help message"
   echo "   update           Update packages and pkg managers (OS, brew, npm, yarn, commposer)"
-  echo "   clean            Clean up caches (brew, npm, composer)"
+  echo "   clean            Clean up caches (brew, npm, yarn, composer)"
 }
 
 sub_update () {
