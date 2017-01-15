@@ -27,3 +27,6 @@ ln -sfv "$DOTFILES_DIR/oh-my-zsh/themes/taybalt.zsh-theme" ~/.oh-my-zsh/themes/
 
 # Clear cache
 . "$DOTFILES_DIR/bin/dotfiles" clean
+
+# Replace default hosts file
+sudo cp "$DOTFILES_DIR/etc/hosts" /etc/hosts
