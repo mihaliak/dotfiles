@@ -4,7 +4,7 @@ Dotfiles I use with MacOS Sierra mostly for Web Development.
 ![iTerm.app](https://raw.github.com/mihaliak/dotfiles/master/iterm/screenshot.png)
 
 Contains:
-  1. System defaults
+  1. [System defaults](https://github.com/mihaliak/dotfiles/blob/master/macos/defaults.sh) and [Dock icons setup](https://github.com/mihaliak/dotfiles/blob/master/macos/dock.sh) 
   2. [Git config with aliases](https://github.com/mihaliak/dotfiles/blob/master/dots/.gitconfig), [Git global ignore](https://github.com/mihaliak/dotfiles/blob/master/dots/.gitignore_global)
   3. [Global aliases](https://github.com/mihaliak/dotfiles/blob/master/dots/.aliases) 
   4. [Functions](https://github.com/mihaliak/dotfiles/blob/master/dots/.functions) for homestead, colored `man` page, `mk` for making folder and entering it
