@@ -32,10 +32,6 @@ sub_clean () {
   composer clear-cache
 }
 
-sub_completion () {
-  echo "help update clean"
-}
-
 case $COMMAND_NAME in
   "" | "-h" | "--help")
     sub_help

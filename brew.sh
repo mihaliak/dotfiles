@@ -17,7 +17,6 @@ brew install composer
 brew install httpie
 brew install nmap
 brew install php70
-brew install youtube-dl
 brew install git
 brew install subversion
 brew install node
@@ -27,6 +26,12 @@ brew install wget
 brew install yarn
 brew install zsh
 brew install zsh-completions
+
+# Wait a bit before moving on...
+sleep 1
+
+# ...and then.
+echo "Success! Basic brew packages are installed."
 
 # Cask
 brew tap caskroom/cask
@@ -57,3 +62,9 @@ brew cask install --appdir="/Applications" skype
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
+
+# Wait a bit before moving on...
+sleep 1
+
+# ...and then.
+echo "Success! Applications are installed."

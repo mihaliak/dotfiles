@@ -19,3 +19,5 @@ dockutil --no-restart --add "/Applications/LastPass.app"
 dockutil --no-restart --add "/Applications/Utilities/Activity Monitor.app"
 
 killall Dock
+
+echo "Success! Dock is set."

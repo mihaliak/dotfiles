@@ -1,5 +1,48 @@
 # Dotfiles
-Dotfiles I use with my Mac OS Sierra
+Dotfiles I use with MacOS Sierra mostly for Web Development.
+
+Contains:
+  1. Packages / CLI
+    - brew & brew cask
+    - dockutil
+    - htop
+    - iftop
+    - openssl
+    - tig
+    - composer
+    - httpie
+    - nmap
+    - php70
+    - git
+    - subversion
+    - node
+    - python3
+    - thefuck
+    - wget
+    - yarn
+    - zsh
+    - zsh-completions
+
+  2. Applications
+    - alfred
+    - flux
+    - google-chrome
+    - slack
+    - spotify
+    - sublime-text
+    - virtualbox
+    - vagrant
+    - vlc
+    - phpstorm
+    - sequel-pro
+    - filezilla
+    - postman
+    - iterm2
+    - teamviewer
+    - lastpass
+    - spectacle
+    - appcleaner
+    - skype
 
 ## Install
 
@@ -15,7 +58,13 @@ Clone and install dotfiles:
     chmod +w install.sh
     ./install.sh
 
-Import PhpStorm settings in editor.
+## Additional steps
+
+1. Install fonts
+2. In iterm `Preferences > General > Load preferences from a custom folder or URL` and set it to `~/dotfiles/iterm`
+3. Import PhpStorm settings
+4. `sudo reboot`
+5. Enjoy
 
 ## The `dotfiles` command
 
