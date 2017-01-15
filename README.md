@@ -1,6 +1,8 @@
 # Dotfiles
 Dotfiles I use with MacOS Sierra mostly for Web Development.
 
+![iTerm.app](https://raw.github.com/mihaliak/dotfiles/master/iterm/screenshot.png)
+
 Contains:
   1. Packages / CLI
     - brew & brew cask
@@ -53,7 +55,7 @@ On fresh installation of MacOS:
 
 Clone and install dotfiles:
 	
-	git clone https://github.com/mihaliak/dotfiles.git ~/dotfiles
+	  git clone https://github.com/mihaliak/dotfiles.git ~/dotfiles
     cd ~/dotfiles
     chmod +w install.sh
     ./install.sh
