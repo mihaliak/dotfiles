@@ -76,7 +76,7 @@ Clone and install dotfiles:
     Commands:
        help             This help message
        update           Update packages and pkg managers (OS, brew, npm, yarn, commposer)
-       clean            Clean up caches (brew, npm, composer)
+       clean            Clean up caches (brew, npm, yarn, composer)
 
 ## Credits
 
