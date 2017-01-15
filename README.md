@@ -11,7 +11,7 @@ Contains:
   5. Custom [/etc/hosts](https://github.com/mihaliak/dotfiles/blob/master/etc/hosts) file with blocked Ads, Trackers & 🔥 stuff on internet
   6. `Inconsolata` font used in iTerm, PhpStorm, Sublime
   7. iTerm profile, oh-my-zsh taybalt theme
-  8. `ssh_list_alises`, `ssh_new_alias`, `ssh_rm_alias` commands to manage ssh config hosts and creating / transfering pub key to server
+  8. `ssh_list_aliases`, `ssh_new_alias`, `ssh_rm_alias` commands to manage ssh config hosts and creating / transfering pub key to server
   9. Packages / CLI (brew, brew cask, dockutil, htop, iftop, openssl, tig, composer, httpie, nmap, php70, git, subversion, node, python3, thefuck, wget, yarn, zsh, zsh-completions)
   10. Applications (alfred, flux, google-chrome, slack, spotify, sublime-text, virtualbox, vagrant, vlc, phpstorm, sequel-pro, filezilla, postman, iterm2, teamviewer, lastpass, spectacle, appcleaner, skype)
 

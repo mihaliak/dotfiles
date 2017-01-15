@@ -11,7 +11,7 @@ alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && kil
 alias rmds="find . -type f -name '*.DS_Store' -ls -delete"
 
 alias ssh_new_alias='~/dotfiles/ssh-alias/ssh-alias-new.rb'
-alias ssh_list_alises='~/dotfiles/ssh-alias/ssh-alias-list.rb'
+alias ssh_list_aliases='~/dotfiles/ssh-alias/ssh-alias-list.rb'
 alias ssh_rm_alias='~/dotfiles/ssh-alias/ssh-alias-delete.rb'
 
 alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;echo "✌️ DNS flushed"'
