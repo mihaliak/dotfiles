@@ -16,3 +16,5 @@ alias ssh_rm_alias='~/dotfiles/ssh-alias/ssh-alias-delete.rb'
 
 alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;echo "✌️ DNS flushed"'
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+
+alias -g @="| grep"
