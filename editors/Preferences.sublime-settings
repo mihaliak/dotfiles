@@ -4,6 +4,7 @@
 	"bold_folder_labels": true,
 	"color_scheme": "Packages/ayu/ayu-mirage.tmTheme",
 	"enable_tab_scrolling": false,
+	"font_face": "Inconsolata for PowerLine",
 	"font_size": 16,
 	"highlight_line": true,
 	"ignored_packages":
@@ -20,6 +21,5 @@
 	"overlay_scroll_bars": "enabled",
 	"theme": "ayu-mirage.sublime-theme",
 	"ui_big_tabs": false,
-	"word_wrap": false,
-	"font_face": "Inconsolata for PowerLine"
+	"word_wrap": false
 }

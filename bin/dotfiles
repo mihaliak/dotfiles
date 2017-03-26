@@ -4,6 +4,10 @@ BIN_NAME=$(basename "$0")
 COMMAND_NAME=$1
 SUB_COMMAND_NAME=$2
 
+# Get dotfiles dir (so run this script from anywhere)
+export DOTFILES_DIR EXTRA_DIR
+DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
+
 sub_help () {
   echo "Usage: $BIN_NAME <command>"
   echo
@@ -11,6 +15,14 @@ sub_help () {
   echo "   help             This help message"
   echo "   update           Update packages and pkg managers (OS, brew, npm, yarn, commposer)"
   echo "   clean            Clean up caches (brew, npm, yarn, composer)"
+  echo "   symlinks         Run symlinks script"
+  echo "   brew             Run brew script"
+  echo "   homestead        Run homestead script"
+  echo "   valet            Run valet script"
+  echo "   ohmyzsh          Run oh my zsh script"
+  echo "   hosts            Run hosts script"
+  echo "   defaults         Run MacOS defaults script"
+  echo "   dock             Run MacOS dock script"
 }
 
 sub_update () {
@@ -30,6 +42,46 @@ sub_clean () {
   npm cache clean
   yarn cache clean
   composer clear-cache
+}
+
+sub_symlinks () {
+  . "$DOTFILES_DIR/install/symlinks.sh"
+  echo "Success! Symlinks command finished."
+}
+
+sub_brew () {
+  . "$DOTFILES_DIR/install/brew.sh"
+  echo "Success! Brew command finished."
+}
+
+sub_homestead () {
+  . "$DOTFILES_DIR/install/homestead.sh"
+  echo "Success! Homestead command finished."
+}
+
+sub_valet () {
+  . "$DOTFILES_DIR/install/valet.sh"
+  echo "Success! Valet command finished."
+}
+
+sub_ohmyzsh () {
+  . "$DOTFILES_DIR/install/oh-my-zsh.sh"
+  echo "Success! Oh my zsh command finished."
+}
+
+sub_hosts () {
+  . "$DOTFILES_DIR/install/hosts.sh"
+  echo "Success! Hosts command finished."
+}
+
+sub_defaults () {
+  . "$DOTFILES_DIR/macos/defaults.sh"
+  echo "Success! MacOS defaults command finished."
+}
+
+sub_dock () {
+  . "$DOTFILES_DIR/macos/dock.sh"
+  echo "Success! MacOS dock command finished."
 }
 
 case $COMMAND_NAME in

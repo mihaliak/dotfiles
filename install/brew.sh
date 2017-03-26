@@ -4,6 +4,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew tap homebrew/versions
 brew tap homebrew/dupes
 brew tap Goles/battery
+brew tap homebrew/php
 brew update
 brew upgrade
 
@@ -53,10 +54,10 @@ brew cask install --appdir="/Applications" filezilla
 brew cask install --appdir="/Applications" postman
 brew cask install --appdir="/Applications" iterm2
 brew cask install --appdir="/Applications" teamviewer
-brew cask install --appdir="/Applications" lastpass
 brew cask install --appdir="/Applications" spectacle
 brew cask install --appdir="/Applications" appcleaner
 brew cask install --appdir="/Applications" skype
+brew cask install --appdir="/Applications" the-unarchiver
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package

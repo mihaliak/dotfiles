@@ -3,3 +3,4 @@ export PATH=/opt/subversion/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 export PATH="$PATH:$HOME/dotfiles/bin"
+export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"

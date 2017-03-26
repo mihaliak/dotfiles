@@ -1,3 +1,5 @@
 eval "$(thefuck --alias)"
 
 ssh-add -A 2>/dev/null;
+
+fpath=(/usr/local/share/zsh-completions $fpath)
