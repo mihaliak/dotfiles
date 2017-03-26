@@ -46,6 +46,14 @@ Clone and install dotfiles:
        help             This help message
        update           Update packages and pkg managers (OS, brew, npm, yarn, commposer)
        clean            Clean up caches (brew, npm, yarn, composer)
+       symlinks         Run symlinks script
+       brew             Run brew script
+       homestead        Run homestead script
+       valet            Run valet script
+       ohmyzsh          Run oh my zsh script
+       hosts            Run hosts script
+       defaults         Run MacOS defaults script
+       dock             Run MacOS dock script
 
 ## Credits
 
