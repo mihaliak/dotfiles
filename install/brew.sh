@@ -29,6 +29,9 @@ brew install wget
 brew install yarn
 brew install zsh
 brew install zsh-completions
+brew install webkit2png
+brew install sqlmap
+brew install aircrack-ng
 
 # Wait a bit before moving on...
 sleep 1
