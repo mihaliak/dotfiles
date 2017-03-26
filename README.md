@@ -13,8 +13,8 @@ Contains:
   7. iTerm profile, oh-my-zsh taybalt theme
   8. `ssh_list_aliases`, `ssh_new_alias`, `ssh_rm_alias` commands to manage ssh config hosts and creating / transfering pub key to server
   9. Packages / CLI (brew, brew cask, dockutil, htop, iftop, openssl, tig, composer, httpie, nmap, php70, git, subversion, node, python3, thefuck, wget, yarn, zsh, zsh-completions)
-  10. Applications (alfred, flux, google-chrome, slack, spotify, sublime-text, virtualbox, vagrant, vlc, phpstorm, sequel-pro, filezilla, postman, iterm2, teamviewer, lastpass, spectacle, appcleaner, skype)
-
+  10. Applications (alfred, flux, google-chrome, slack, spotify, sublime-text, vlc, phpstorm, sequel-pro, filezilla, postman, iterm2, teamviewer, lastpass, spectacle, appcleaner, skype)
+  11. Homestead or Valet (installation script will ask you, leave empty for nothing, if homestead is selected virtualbox and vagrant will be installed via brew, if valet mysql will be installed)
 ## Install
 
 On fresh installation of MacOS:
@@ -25,7 +25,7 @@ On fresh installation of MacOS:
 Clone and install dotfiles:
 	
     git clone https://github.com/mihaliak/dotfiles.git ~/dotfiles
-    cd ~/dotfiles
+    cd ~/dotfiles/install
     chmod +w install.sh
     ./install.sh
 
