@@ -394,9 +394,11 @@
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>269 122 796 473 0 0 1280 778 </string>
+	<string>207 75 918 512 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1 269 1060 507 0 0 1280 778 </string>
+	<string>70 184 1060 507 0 0 1280 778 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>152 50 1060 507 0 0 1280 778 </string>
 	<key>NeverWarnAboutShortLivedSessions_0757B11A-8C62-47E3-8A70-9A327C9A03C1</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_0757B11A-8C62-47E3-8A70-9A327C9A03C1_selection</key>
@@ -670,7 +672,7 @@
 			<key>Columns</key>
 			<integer>150</integer>
 			<key>Command</key>
-			<string></string>
+			<string>/bin/zsh</string>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -713,7 +715,7 @@
 			<key>Cursor Type</key>
 			<integer>1</integer>
 			<key>Custom Command</key>
-			<string>No</string>
+			<string>Yes</string>
 			<key>Custom Directory</key>
 			<string>No</string>
 			<key>Default Bookmark</key>
@@ -743,6 +745,8 @@
 			<real>1</real>
 			<key>Idle Code</key>
 			<integer>0</integer>
+			<key>Initial Text</key>
+			<string></string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -1132,6 +1136,8 @@
 			<string>/Users/nipid</string>
 		</dict>
 	</array>
+	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
+	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
@@ -1194,7 +1200,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-03-26T13:48:56Z</date>
+	<date>2017-03-27T13:48:58Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>WordCharacters</key>
