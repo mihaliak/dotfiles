@@ -6,7 +6,7 @@ git clone https://github.com/laravel/homestead.git ~/Homestead
 
 cd ~/Homestead
 
-git checkout v5.1.0
+git checkout $HOMESTEAD_VERSION
 
 bash init.sh
 
