@@ -1,10 +1,13 @@
 alias code='cd ~/Code'
+alias desktop='cd ~/Desktop'
 alias c='clear'
+alias .='pwd'
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
 alias t='./vendor/bin/phpunit'
-alias x=xdebug-toggle
+alias clean='artisan cache:clear && artisan clear-compiled && artisan optimize'
+alias path='echo $PATH | tr -s ":" "\n"'
 
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"

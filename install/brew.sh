@@ -19,7 +19,6 @@ brew install httpie
 brew install nmap
 brew install homebrew/php/php71
 brew install php71-xdebug
-brew install xdebug-osx
 brew install git
 brew install subversion
 brew install node
@@ -32,6 +31,7 @@ brew install zsh-completions
 brew install webkit2png
 brew install sqlmap
 brew install aircrack-ng
+brew install unrar
 
 # Wait a bit before moving on...
 sleep 1
@@ -47,7 +47,6 @@ brew tap caskroom/versions
 # Install cask packages
 
 brew cask install --appdir="/Applications" alfred
-brew cask install --appdir="/Applications" flux
 brew cask install --appdir="/Applications" google-chrome
 brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" spotify
@@ -65,7 +64,7 @@ brew cask install --appdir="/Applications" skype
 brew cask install --appdir="/Applications" the-unarchiver
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook qlvideo
 
 # Wait a bit before moving on...
 sleep 1

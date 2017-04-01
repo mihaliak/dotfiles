@@ -1,3 +1,7 @@
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+NC='\033[0m'
+
 function artisan() {
     php artisan "$@"
 }
@@ -20,4 +24,60 @@ man() {
 
 function mk() {
 	mkdir -p "$@" && cd "$@"
+}
+
+function e() {
+    if [[ ! -f .env ]]; then
+        echo -e "${RED}Error: .env file does not exists${NC}" && return
+    fi
+
+    cat .env @ $1
+}
+
+function sshkeys() {
+	for file in ~/.ssh/*.pub
+	do
+	    echo ${file##*/}
+	done
+}
+
+function sshkey() {
+	local key="id_rsa"
+	local folder=$HOME"/.ssh/"
+
+	if [[ "$1" ]]; then
+		key+="_"$1
+	fi
+
+	key+=".pub"
+
+	if [[ ! -f $folder$key ]]; then
+        echo -e "${RED}Error: Key $key does not exists in $folder ${NC}" && return
+    fi
+
+	cat $folder$key | pbcopy && echo -e "${GREEN}Your public SSH key $key was successfully copied to the clipboard.${NC}"
+}
+
+extract () {
+    if [ -f $1 ]; then
+        case $1 in
+            *.tar.bz2)  tar -jxvf $1                        ;;
+            *.tar.gz)   tar -zxvf $1                        ;;
+            *.bz2)      bunzip2 $1                          ;;
+            *.dmg)      hdiutil mount $1                    ;;
+            *.gz)       gunzip $1                           ;;
+            *.tar)      tar -xvf $1                         ;;
+            *.tbz2)     tar -jxvf $1                        ;;
+            *.tgz)      tar -zxvf $1                        ;;
+            *.zip)      unzip $1                            ;;
+            *.ZIP)      unzip $1                            ;;
+            *.pax)      cat $1 | pax -r                     ;;
+            *.pax.Z)    uncompress $1 --stdout | pax -r     ;;
+            *.rar)      unrar x $1                          ;;
+            *.Z)        uncompress $1                       ;;
+            *)          echo -e "${RED}Error: '$1' cannot be extracted/mounted via extract()${NC}" ;;
+        esac
+    else
+        echo "${RED}Error: '$1' is not a valid file${NC}"
+    fi
 }
