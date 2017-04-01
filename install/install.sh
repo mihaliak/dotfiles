@@ -1,5 +1,7 @@
-# Install brew & stuff
+# Install brew with packages & casks, composer and yarn global packages
 . "$DOTFILES_DIR/install/brew.sh"
+. "$DOTFILES_DIR/install/composer.sh"
+. "$DOTFILES_DIR/install/yarn.sh"
 
 echo "Select optional software to install:"
 

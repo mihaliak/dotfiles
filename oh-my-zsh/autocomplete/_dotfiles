@@ -1,0 +1,13 @@
+#compdef dotfiles
+ 
+_arguments "1: :(help)"
+_arguments "1: :(update)"
+_arguments "1: :(clean)"
+_arguments "1: :(symlinks)"
+_arguments "1: :(brew)"
+_arguments "1: :(homestead)"
+_arguments "1: :(valet)"
+_arguments "1: :(ohmyzsh)"
+_arguments "1: :(hosts)"
+_arguments "1: :(defaults)"
+_arguments "1: :(dock)"

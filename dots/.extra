@@ -2,4 +2,4 @@ eval "$(thefuck --alias)"
 
 ssh-add -A 2>/dev/null;
 
-fpath=(/usr/local/share/zsh-completions $fpath)
+fpath=($HOME"/dotfiles/oh-my-zsh/autocomplete" /usr/local/share/zsh-completions $fpath)
