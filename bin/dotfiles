@@ -4,97 +4,104 @@ BIN_NAME=$(basename "$0")
 COMMAND_NAME=$1
 SUB_COMMAND_NAME=$2
 
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+NC='\033[0m'
+
 # Get dotfiles dir (so run this script from anywhere)
 export DOTFILES_DIR EXTRA_DIR
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
 
 sub_help () {
-  echo "Usage: $BIN_NAME <command>"
-  echo
-  echo "Commands:"
-  echo "   help             This help message"
-  echo "   update           Update packages and pkg managers (OS, brew, npm, yarn, commposer)"
-  echo "   clean            Clean up caches (brew, npm, yarn, composer)"
-  echo "   symlinks         Run symlinks script"
-  echo "   brew             Run brew script"
-  echo "   homestead        Run homestead script"
-  echo "   valet            Run valet script"
-  echo "   ohmyzsh          Run oh my zsh script"
-  echo "   hosts            Run hosts script"
-  echo "   defaults         Run MacOS defaults script"
-  echo "   dock             Run MacOS dock script"
+    echo -e "Usage: ${YELLOW}$BIN_NAME <command>${NC}"
+    echo
+    echo "Commands:"
+    echo "   help             This help message"
+    echo "   update           Update packages and pkg managers (OS, brew, npm, yarn, commposer)"
+    echo "   clean            Clean up caches (brew, npm, yarn, composer)"
+    echo "   symlinks         Run symlinks script"
+    echo "   brew             Run brew script"
+    echo "   homestead        Run homestead script"
+    echo "   valet            Run valet script"
+    echo "   ohmyzsh          Run oh my zsh script"
+    echo "   hosts            Run hosts script"
+    echo "   defaults         Run MacOS defaults script"
+    echo "   dock             Run MacOS dock script"
 }
 
 sub_update () {
-  sudo softwareupdate -i -a
-  brew update
-  brew upgrade
-  npm install npm -g
-  npm update -g
-  # yarn is currently broken so it needs to be updated manualy
-  # yarn self-update
-  composer self-update
+    sudo softwareupdate -i -a
+    brew update
+    brew upgrade
+    npm install npm -g
+    npm update -g
+    # yarn is currently broken so it needs to be updated manualy
+    # yarn self-update
+    composer self-update
+    echo -e "${GREEN}Success! Update command finished.${NC}"
 }
 
 sub_clean () {
-  brew cleanup
-  brew cask cleanup
-  npm cache clean
-  yarn cache clean
-  composer clear-cache
+    brew cleanup
+    brew cask cleanup
+    npm cache clean
+    yarn cache clean
+    composer clear-cache
+    echo -e "${GREEN}Success! Clean command finished.${NC}"
 }
 
 sub_symlinks () {
-  . "$DOTFILES_DIR/install/symlinks.sh"
-  echo "Success! Symlinks command finished."
+    . "$DOTFILES_DIR/install/symlinks.sh"
+    echo -e "${GREEN}Success! Symlinks command finished.${NC}"
 }
 
 sub_brew () {
-  . "$DOTFILES_DIR/install/brew.sh"
-  echo "Success! Brew command finished."
+    . "$DOTFILES_DIR/install/brew.sh"
+    echo -e "${GREEN}Success! Brew command finished.${NC}"
 }
 
 sub_homestead () {
-  . "$DOTFILES_DIR/install/homestead.sh"
-  echo "Success! Homestead command finished."
+    . "$DOTFILES_DIR/install/homestead.sh"
+    echo -e "${GREEN}Success! Homestead command finished.${NC}"
 }
 
 sub_valet () {
-  . "$DOTFILES_DIR/install/valet.sh"
-  echo "Success! Valet command finished."
+    . "$DOTFILES_DIR/install/valet.sh"
+    echo -e "${GREEN}Success! Valet command finished.${NC}"
 }
 
 sub_ohmyzsh () {
-  . "$DOTFILES_DIR/install/oh-my-zsh.sh"
-  echo "Success! Oh my zsh command finished."
+    . "$DOTFILES_DIR/install/oh-my-zsh.sh"
+    echo -e "${GREEN}Success! Oh my zsh command finished.${NC}"
 }
 
 sub_hosts () {
-  . "$DOTFILES_DIR/install/hosts.sh"
-  echo "Success! Hosts command finished."
+    . "$DOTFILES_DIR/install/hosts.sh"
+    echo -e "${GREEN}Success! Hosts command finished.${NC}"
 }
 
 sub_defaults () {
-  . "$DOTFILES_DIR/macos/defaults.sh"
-  echo "Success! MacOS defaults command finished."
+    . "$DOTFILES_DIR/macos/defaults.sh"
+    echo -e "${GREEN}Success! MacOS defaults command finished.${NC}"
 }
 
 sub_dock () {
-  . "$DOTFILES_DIR/macos/dock.sh"
-  echo "Success! MacOS dock command finished."
+    . "$DOTFILES_DIR/macos/dock.sh"
+    echo -e "${GREEN}Success! MacOS dock command finished.${NC}"
 }
 
 case $COMMAND_NAME in
-  "" | "-h" | "--help")
-    sub_help
-    ;;
-  *)
-    shift
-    sub_${COMMAND_NAME} $@
-    if [ $? = 127 ]; then
-      echo "'$COMMAND_NAME' is not a known command or has errors." >&2
-      sub_help
-      exit 1
-    fi
-    ;;
+    "" | "-h" | "--help")
+        sub_help
+        ;;
+    *)
+        shift
+        sub_${COMMAND_NAME} $@
+        if [ $? = 127 ]; then
+            echo -e "${RED}Error: '$COMMAND_NAME' is not a known command or has errors.${NC}" >&2
+            sub_help
+            exit 1
+        fi
+        ;;
 esac
