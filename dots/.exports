@@ -1,8 +1,2 @@
 export EDITOR=nano
-export PATH=/opt/subversion/bin:$PATH
-export PATH=/usr/local/bin:$PATH
-export PATH="$PATH:$HOME/.composer/vendor/bin"
-export PATH="$PATH:$HOME/dotfiles/bin"
-export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
-export PATH="$PATH:$(yarn global bin)"
-export PATH="/usr/local/sbin:$PATH"
+export PATH="$HOME/dotfiles/bin:/usr/local/sbin:$HOME/.config/yarn/global/node_modules/.bin:/usr/local/opt/php71/bin:$HOME/.composer/vendor/bin:/usr/local/bin:/opt/subversion/bin:$PATH"

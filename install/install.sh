@@ -37,3 +37,6 @@ fi
 
 # Replace default hosts file
 . "$DOTFILES_DIR/install/hosts.sh"
+
+# Add keys from keychain to ssh agent
+ssh-add -A 2>/dev/null;
