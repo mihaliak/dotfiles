@@ -7,14 +7,15 @@ Contains:
   1. [System defaults](https://github.com/mihaliak/dotfiles/blob/master/macos/defaults.sh) and [Dock icons setup](https://github.com/mihaliak/dotfiles/blob/master/macos/dock.sh) 
   2. [Git config with aliases](https://github.com/mihaliak/dotfiles/blob/master/dots/.gitconfig), [Git global ignore](https://github.com/mihaliak/dotfiles/blob/master/dots/.gitignore_global)
   3. [Global aliases](https://github.com/mihaliak/dotfiles/blob/master/dots/.aliases) 
-  4. [Functions](https://github.com/mihaliak/dotfiles/blob/master/dots/.functions) for homestead, colored `man` page, `mk` for making folder and entering it
+  4. [Functions](https://github.com/mihaliak/dotfiles/blob/master/dots/.functions) for homestead, colored `man` page, `mk` for making folder and entering it, `extract` to extract any compressed file, `e` to read .env file variables in `pwd`
   5. Custom [/etc/hosts](https://github.com/mihaliak/dotfiles/blob/master/etc/hosts) file with blocked Ads, Trackers & 🔥 stuff on internet
   6. `Inconsolata` font used in iTerm, PhpStorm, Sublime
   7. iTerm profile, oh-my-zsh taybalt theme
-  8. `ssh_list_aliases`, `ssh_new_alias`, `ssh_rm_alias` commands to manage ssh config hosts and creating / transfering pub key to server
-  9. Packages / CLI (brew, brew cask, dockutil, htop, iftop, openssl, tig, composer, httpie, nmap, php70, git, subversion, node, python3, thefuck, wget, yarn, zsh, zsh-completions)
-  10. Applications (alfred, flux, google-chrome, slack, spotify, sublime-text, vlc, phpstorm, sequel-pro, filezilla, postman, iterm2, teamviewer, lastpass, spectacle, appcleaner, skype)
+  8. `ssh-manager` command to manage ssh config hosts and keys, including copy public keys to clipboard, transfer to server and more with autocomplete
+  9. Packages / CLI (brew, brew cask, dockutil, htop, iftop, openssl, tig, composer, httpie, nmap, php71, git, subversion, node, python3, thefuck, wget, yarn, zsh, zsh-completions)
+  10. Applications (alfred, google-chrome, slack, spotify, sublime-text, vlc, phpstorm, sequel-pro, filezilla, postman, iterm2, teamviewer, lastpass, spectacle, appcleaner, skype)
   11. Homestead or Valet (installation script will ask you, leave empty for nothing, if homestead is selected virtualbox and vagrant will be installed via brew, if valet mysql will be installed)
+  12. `dotfiles` binary to manage dotfiles functions with autocomplete
 ## Install
 
 On fresh installation of MacOS:
@@ -26,7 +27,8 @@ Clone and install dotfiles:
 	
     git clone https://github.com/mihaliak/dotfiles.git ~/dotfiles
     cd ~/dotfiles/install
-    chmod +w install.sh
+    chmod +wx install.sh
+    chmod +wx ssh-manager.sh
     ./install.sh
 
 ## Additional steps
@@ -39,8 +41,8 @@ Clone and install dotfiles:
 
 ## The `dotfiles` command
 
-    $ dotfiles help
-    Usage: dotfiles <command>
+    $ dotfiles
+    ￫ Usage: dotfiles <command>
 
     Commands:
        help             This help message
@@ -54,6 +56,21 @@ Clone and install dotfiles:
        hosts            Run hosts script
        defaults         Run MacOS defaults script
        dock             Run MacOS dock script
+
+## The `ssh-manager` command
+
+    $ ssh-manager
+    ￫ Usage: ssh-manager <command>
+
+    Commands:
+       help             This help message
+       list             List of all SSH keys and hosts in SSH config
+       list-keys        List of all SSH keys
+       copy             Copy public SSH key
+       new              Generate new SSH key
+       host             Add host to SSH config
+       remove           Remove host from SSH config
+       list-host        List of all hosts in SSH config
 
 ## Credits
 
