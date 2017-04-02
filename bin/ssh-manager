@@ -1,0 +1,162 @@
+#!/usr/bin/env bash
+
+BIN_NAME=$(basename "$0")
+COMMAND_NAME=$1
+ARROW="￫"
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+NC='\033[0m'
+
+if [[ ! $COMMAND_NAME ]] || [[ $COMMAND_NAME = "help" ]] || [[ $COMMAND_NAME = "-h" ]] || [[ $COMMAND_NAME = "--help" ]]; then
+	echo -e "$ARROW Usage: ${YELLOW}$BIN_NAME <command>${NC}"
+    echo
+    echo "Commands:"
+    echo "   help             This help message"
+    echo "   list             List of all SSH keys and hosts in SSH config"
+    echo "   list-keys        List of all SSH keys"
+    echo "   copy             Copy public SSH key"
+    echo "   new              Generate new SSH key"
+    echo "   host             Add host to SSH config"
+    echo "   remove           Remove host from SSH config"
+    echo "   list-host        List of all hosts in SSH config"
+fi
+
+if [[ "$COMMAND_NAME" = "list" ]]; then
+	$BIN_NAME list-keys
+	$BIN_NAME list-host
+fi
+
+if [[ $COMMAND_NAME = "list-keys" ]]; then
+	echo -e "${YELLOW}$ARROW List of available keys:${NC}"
+
+	for file in ~/.ssh/*.pub
+	do
+	    echo "- "${file##*/}
+	done
+fi
+
+if [[ $COMMAND_NAME = "list-host" ]]; then
+	echo -e "${YELLOW}$ARROW List of available hosts in SSH config:${NC}"
+
+	awk '/host (.*)/ { print "- "$2 }' ~/.ssh/config
+fi
+
+if [[ $COMMAND_NAME = "copy" ]]; then
+	folder=$HOME"/.ssh/"
+	key=$2
+
+	if [[ ! "$key" ]]; then
+		echo -e "${RED}$ARROW Error: You have to pass key name. Usage: $BIN_NAME copy <name>${NC}"
+	else
+		key+=".pub"
+
+		if [[ ! -f $folder$key ]]; then
+	        echo -e "${RED}$ARROW Error: Key $key does not exists in $folder.${NC}" && return
+	    else
+			cat $folder$key | pbcopy && echo -e "${GREEN}$ARROW Success: Your public SSH key $key was successfully copied to the clipboard.${NC}"
+	    fi
+	fi
+fi
+
+if [[ $COMMAND_NAME = "new" ]]; then
+	while true; do
+		read -p "$(echo -e "${YELLOW}$ARROW Enter key file name:${NC} ")" key
+
+		if [[ -f $HOME"/.ssh/id_ed25519_"$key ]]; then
+			echo -e "${RED}$ARROW Error: Key with this file name already exists.${NC}"
+		else
+			break
+		fi
+	done
+
+	read -p "$(echo -e "${YELLOW}$ARROW Enter key comment:${NC} ")" comment
+
+	ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519_$key -C "$comment"
+
+	if [[ $2 ]] && [[ $2 = "--save" ]]; then
+		echo $key > ~/.ssh/key_name.tmp
+	fi
+
+	echo -e "${GREEN}$ARROW Success: SSH key '$key' was successfully created with comment '$comment'.${NC}"
+fi
+
+if [[ $COMMAND_NAME = "host" ]]; then
+	config="$(cat ~/.ssh/config)"
+
+	while true; do
+		read -p "$(echo -e "${YELLOW}$ARROW Enter host short name:${NC} ")" shortname
+
+		if [[ $config == *"host $shortname"* ]]; then
+			echo -e "${RED}$ARROW Error: Host with this name already exists.${NC}"
+		else
+			break
+		fi
+	done
+
+	while true; do
+		read -p "$(echo -e "${YELLOW}$ARROW Enter host name:${NC} ")" host
+
+		if [[ ! "$host" ]]; then
+			echo -e "${RED}$ARROW Error: Host name is required.${NC}"
+		else
+			break
+		fi
+	done
+
+	read -p "$(echo -e "${YELLOW}$ARROW Enter host port (default 22):${NC} ")" port
+	port=${port:-"22"}
+
+	read -p "$(echo -e "${YELLOW}$ARROW Enter host user (default root):${NC} ")" user
+	user=${user:-"root"}
+
+	if [[ $2 ]] && [[ $2 = "--key" ]]; then
+		$BIN_NAME new --save
+		key="$(cat ~/.ssh/key_name.tmp)"
+		rm ~/.ssh/key_name.tmp
+	else
+		read -p "$(echo -e "${YELLOW}$ARROW Enter SSH key name (default none):${NC} ")" key
+		key=${key:-"none"}
+	fi
+
+	echo "host $shortname" >> ~/.ssh/config
+	echo " hostname $host" >> ~/.ssh/config
+	echo " port $port" >> ~/.ssh/config
+	echo " user $user" >> ~/.ssh/config
+
+	if [[ ! $key = "none" ]]; then
+		echo " IdentityFile ~/.ssh/id_ed25519_$key" >> ~/.ssh/config
+	fi
+
+	echo "" >> ~/.ssh/config
+
+	read -p "$(echo -e "${YELLOW}$ARROW Would you like to transfer public key id_ed25519_$key.pub to server $host ($shortname)? (y|n): ${NC} ")" transfer
+
+	if [[ $transfer = "y" ]] || [[ $transfer = "yes" ]]; then
+		publicKey="$(cat ~/.ssh/id_ed25519_$key.pub)"
+		ssh $shortname "mkdir -p ~/.ssh; echo $publicKey >> ~/.ssh/authorized_keys;"
+		echo -e "${GREEN}$ARROW Success: Public key id_ed25519_$key.pub was successfully transfered to the server.${NC}"
+	fi
+
+	echo -e "${GREEN}$ARROW Success: SSH host '$shortname' was successfully added to SSH config.${NC}"
+	echo -e "${GREEN}$ARROW          You can now use 'ssh $shortname' to go to SSH.${NC}"
+fi
+
+if [[ $COMMAND_NAME = "remove" ]]; then
+	config="$(cat ~/.ssh/config)"
+	shortname=$2
+
+	while [[ ! $shortname ]] || [[ $shortname = "" ]]; do
+		read -p "$(echo -e "${YELLOW}$ARROW Enter host short name:${NC} ")" shortname
+
+		if [[ ! $config == *"host $shortname"* ]]; then
+			echo -e "${RED}$ARROW Error: Host with this name doesnt not exists in SSH config.${NC}"
+		else
+			break
+		fi
+	done
+
+	sed -ie "/^host $shortname$/,/^$/d" ~/.ssh/config
+
+	echo -e "${GREEN}$ARROW Success: SSH host '$shortname' was successfully remove from SSH config.${NC}"
+fi

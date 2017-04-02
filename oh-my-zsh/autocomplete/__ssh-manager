@@ -1,0 +1,10 @@
+#compdef ssh-manager
+ 
+_arguments "1: :(help)"
+_arguments "1: :(list)"
+_arguments "1: :(list-keys)"
+_arguments "1: :(copy)"
+_arguments "1: :(new)"
+_arguments "1: :(host)"
+_arguments "1: :(remove)"
+_arguments "1: :(list-host)"
