@@ -49,10 +49,10 @@ if [[ $COMMAND_NAME = "copy" ]]; then
 	if [[ ! "$key" ]]; then
 		echo -e "${RED}$ARROW Error: You have to pass key name. Usage: $BIN_NAME copy <name>${NC}"
 	else
-		key+=".pub"
+		key="id_ed25519_"$key".pub"
 
 		if [[ ! -f $folder$key ]]; then
-	        echo -e "${RED}$ARROW Error: Key $key does not exists in $folder.${NC}" && return
+	        echo -e "${RED}$ARROW Error: Key $key does not exists in $folder.${NC}"
 	    else
 			cat $folder$key | pbcopy && echo -e "${GREEN}$ARROW Success: Your public SSH key $key was successfully copied to the clipboard.${NC}"
 	    fi
