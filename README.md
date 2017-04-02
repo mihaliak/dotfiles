@@ -68,7 +68,7 @@ Clone and install dotfiles:
        list-keys        List of all SSH keys
        copy             Copy public SSH key
        new              Generate new SSH key
-       host             Add host to SSH config
+       host             Add host to SSH config, use --key to generate new key
        remove           Remove host from SSH config
        list-host        List of all hosts in SSH config
 

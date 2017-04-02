@@ -17,7 +17,7 @@ if [[ ! $COMMAND_NAME ]] || [[ $COMMAND_NAME = "help" ]] || [[ $COMMAND_NAME = "
     echo "   list-keys        List of all SSH keys"
     echo "   copy             Copy public SSH key"
     echo "   new              Generate new SSH key"
-    echo "   host             Add host to SSH config"
+    echo "   host             Add host to SSH config, use --key to generate new key"
     echo "   remove           Remove host from SSH config"
     echo "   list-host        List of all hosts in SSH config"
 fi
