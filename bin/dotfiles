@@ -4,6 +4,7 @@ BIN_NAME=$(basename "$0")
 COMMAND_NAME=$1
 SUB_COMMAND_NAME=$2
 
+ARROW="￫"
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
@@ -14,7 +15,7 @@ export DOTFILES_DIR EXTRA_DIR
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
 
 sub_help () {
-    echo -e "Usage: ${YELLOW}$BIN_NAME <command>${NC}"
+    echo -e "$ARROW Usage: ${YELLOW}$BIN_NAME <command>${NC}"
     echo
     echo "Commands:"
     echo "   help             This help message"
@@ -39,7 +40,7 @@ sub_update () {
     # yarn is currently broken so it needs to be updated manualy
     # yarn self-update
     composer self-update
-    echo -e "${GREEN}Success! Update command finished.${NC}"
+    echo -e "${GREEN}$ARROW Success! Update command finished.${NC}"
 }
 
 sub_clean () {
@@ -48,47 +49,47 @@ sub_clean () {
     npm cache clean
     yarn cache clean
     composer clear-cache
-    echo -e "${GREEN}Success! Clean command finished.${NC}"
+    echo -e "${GREEN}$ARROW Success! Clean command finished.${NC}"
 }
 
 sub_symlinks () {
     . "$DOTFILES_DIR/install/symlinks.sh"
-    echo -e "${GREEN}Success! Symlinks command finished.${NC}"
+    echo -e "${GREEN}$ARROW Success! Symlinks command finished.${NC}"
 }
 
 sub_brew () {
     . "$DOTFILES_DIR/install/brew.sh"
-    echo -e "${GREEN}Success! Brew command finished.${NC}"
+    echo -e "${GREEN}$ARROW Success! Brew command finished.${NC}"
 }
 
 sub_homestead () {
     . "$DOTFILES_DIR/install/homestead.sh"
-    echo -e "${GREEN}Success! Homestead command finished.${NC}"
+    echo -e "${GREEN}$ARROW Success! Homestead command finished.${NC}"
 }
 
 sub_valet () {
     . "$DOTFILES_DIR/install/valet.sh"
-    echo -e "${GREEN}Success! Valet command finished.${NC}"
+    echo -e "${GREEN}$ARROW Success! Valet command finished.${NC}"
 }
 
 sub_ohmyzsh () {
     . "$DOTFILES_DIR/install/oh-my-zsh.sh"
-    echo -e "${GREEN}Success! Oh my zsh command finished.${NC}"
+    echo -e "${GREEN}$ARROW Success! Oh my zsh command finished.${NC}"
 }
 
 sub_hosts () {
     . "$DOTFILES_DIR/install/hosts.sh"
-    echo -e "${GREEN}Success! Hosts command finished.${NC}"
+    echo -e "${GREEN}$ARROW Success! Hosts command finished.${NC}"
 }
 
 sub_defaults () {
     . "$DOTFILES_DIR/macos/defaults.sh"
-    echo -e "${GREEN}Success! MacOS defaults command finished.${NC}"
+    echo -e "${GREEN}$ARROW Success! MacOS defaults command finished.${NC}"
 }
 
 sub_dock () {
     . "$DOTFILES_DIR/macos/dock.sh"
-    echo -e "${GREEN}Success! MacOS dock command finished.${NC}"
+    echo -e "${GREEN}$ARROW Success! MacOS dock command finished.${NC}"
 }
 
 case $COMMAND_NAME in
@@ -99,7 +100,7 @@ case $COMMAND_NAME in
         shift
         sub_${COMMAND_NAME} $@
         if [ $? = 127 ]; then
-            echo -e "${RED}Error: '$COMMAND_NAME' is not a known command or has errors.${NC}" >&2
+            echo -e "${RED}$ARROW Error: '$COMMAND_NAME' is not a known command or has errors.${NC}" >&2
             sub_help
             exit 1
         fi
