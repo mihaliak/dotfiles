@@ -26,9 +26,11 @@ On fresh installation of MacOS:
 Clone and install dotfiles:
 	
     git clone https://github.com/mihaliak/dotfiles.git ~/dotfiles
+    cd ~/dotfiles
+    git checkout v2.6
     cd ~/dotfiles/install
     chmod +wx install.sh
-    chmod +wx ssh-manager.sh
+    chmod -R +wx ~/dotfiles/bin
     ./install.sh
 
 ## Additional steps
