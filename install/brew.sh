@@ -32,6 +32,7 @@ brew install webkit2png
 brew install sqlmap
 brew install aircrack-ng
 brew install unrar
+brew install wifi-password
 
 # Wait a bit before moving on...
 sleep 1

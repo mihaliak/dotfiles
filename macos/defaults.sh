@@ -73,6 +73,9 @@ defaults write com.apple.screencapture location -string "$HOME/Desktop"
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
 
+# Disable screenshot shadow
+defaults write com.apple.screencapture disable-shadow -bool true
+
 # Show/Hide icons for hard drives, servers, and removable media on the desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
@@ -100,6 +103,13 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 
 # Set the icon size of Dock items to 35 pixels
 defaults write com.apple.dock tilesize -int 35
+
+# Disable smart quotes and dashes
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+# Set format of date & hours in menu bar
+defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM  HH:mm"
 
 for app in "Address Book" "Calendar" "Contacts" "Dock" "Finder" "Mail" "Safari" "SystemUIServer" "iCal"; do
   killall "${app}" &> /dev/null
