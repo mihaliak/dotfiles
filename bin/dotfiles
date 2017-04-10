@@ -37,9 +37,9 @@ sub_update () {
     brew upgrade
     npm install npm -g
     npm update -g
-    # yarn is currently broken so it needs to be updated manualy
-    # yarn self-update
-    composer self-update
+    yarn self-update 2> /dev/null
+    composer self-update 2> /dev/null
+    composer global update composer/composer 2>/dev/null
     echo -e "${GREEN}$ARROW Success! Update command finished.${NC}"
 }
 
