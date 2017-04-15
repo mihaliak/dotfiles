@@ -394,9 +394,9 @@
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>207 75 918 512 0 0 1280 778 </string>
+	<string>125 174 918 512 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>102 197 1060 507 0 0 1280 778 </string>
+	<string>0 73 1276 705 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>152 50 1060 507 0 0 1280 778 </string>
 	<key>NeverWarnAboutShortLivedSessions_0757B11A-8C62-47E3-8A70-9A327C9A03C1</key>
@@ -1202,11 +1202,13 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-04-02T17:38:04Z</date>
+	<date>2017-04-14T10:50:32Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
 	<false/>
+	<key>TabStyle</key>
+	<integer>0</integer>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>

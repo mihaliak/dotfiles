@@ -1,8 +1,3 @@
-# Install brew with packages & casks, composer and yarn global packages
-. "$DOTFILES_DIR/install/brew.sh"
-. "$DOTFILES_DIR/install/composer.sh"
-. "$DOTFILES_DIR/install/yarn.sh"
-
 echo "Select optional software to install:"
 
 echo " [1] Valet"
@@ -10,6 +5,11 @@ echo " [2] Homestead"
 read -r -p "Install:" softwareToInstall
 
 softwareToInstall=${softwareToInstall:-3}
+
+# Install brew with packages & casks, composer and yarn global packages
+. "$DOTFILES_DIR/install/brew.sh"
+. "$DOTFILES_DIR/install/composer.sh"
+. "$DOTFILES_DIR/install/yarn.sh"
 
 if [ "$softwareToInstall" -eq 1 ] ; then
 	. "$DOTFILES_DIR/install/valet.sh"
