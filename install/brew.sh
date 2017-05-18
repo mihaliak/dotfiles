@@ -57,12 +57,12 @@ brew cask install --appdir="/Applications" phpstorm
 brew cask install --appdir="/Applications" sequel-pro
 brew cask install --appdir="/Applications" filezilla
 brew cask install --appdir="/Applications" postman
-brew cask install --appdir="/Applications" iterm2
 brew cask install --appdir="/Applications" teamviewer
 brew cask install --appdir="/Applications" spectacle
 brew cask install --appdir="/Applications" appcleaner
 brew cask install --appdir="/Applications" skype
 brew cask install --appdir="/Applications" the-unarchiver
+brew cask install --appdir="/Applications" hyper
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook qlvideo

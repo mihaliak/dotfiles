@@ -1,0 +1,7 @@
+.tab_textActive {
+	background: transparent !important; box-shadow: none !important;
+}
+
+.term_fit {
+	height: calc(100% - 15px);
+}
