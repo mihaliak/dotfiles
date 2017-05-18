@@ -116,7 +116,6 @@ module.exports = {
   //   `project#1.0.1`
   plugins: [
   'hyper-ayu',
-  'hyper-statusline',
   'hyper-tabs-enhanced',
   'hyper-dark-scrollbar',
   'hyper-stylesheet',
