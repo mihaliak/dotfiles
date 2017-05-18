@@ -1,3 +1,11 @@
 eval "$(thefuck --alias)"
 
 fpath=($HOME"/dotfiles/oh-my-zsh/autocomplete" /usr/local/share/zsh-completions $fpath)
+
+case $TERM in
+    xterm*)
+        precmd () {
+        	echo -en "\e]0;$(pwd | sed -e "s,^$HOME,~," | sed "s@\(.\)[^/]*/@\1/@g")\a"
+        }
+        ;;
+esac
