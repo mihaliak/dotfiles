@@ -1,7 +1,7 @@
 # Dotfiles
 Dotfiles I use with MacOS Sierra mostly for Web Development.
 
-![iTerm.app](https://raw.github.com/mihaliak/dotfiles/master/iterm/screenshot.png)
+![Hyper.app](https://raw.github.com/mihaliak/dotfiles/master/screenshot.png)
 
 Contains:
   1. [System defaults](https://github.com/mihaliak/dotfiles/blob/master/macos/defaults.sh) and [Dock icons setup](https://github.com/mihaliak/dotfiles/blob/master/macos/dock.sh) 
@@ -9,11 +9,11 @@ Contains:
   3. [Global aliases](https://github.com/mihaliak/dotfiles/blob/master/dots/.aliases) 
   4. [Functions](https://github.com/mihaliak/dotfiles/blob/master/dots/.functions) for homestead, colored `man` page, `mk` for making folder and entering it, `extract` to extract any compressed file, `e` to read .env file variables in `pwd`
   5. Custom [/etc/hosts](https://github.com/mihaliak/dotfiles/blob/master/etc/hosts) file with blocked Ads, Trackers & 🔥 stuff on internet
-  6. `Inconsolata` font used in iTerm, PhpStorm, Sublime
-  7. iTerm profile, oh-my-zsh taybalt theme
+  6. `Inconsolata` font used in Hyper, PhpStorm, Sublime
+  7. Hyper with settings and custom css, oh-my-zsh taybalt theme
   8. `ssh-manager` command to manage ssh config hosts and keys, including copy public keys to clipboard, transfer to server and more with autocomplete
   9. Packages / CLI (brew, brew cask, dockutil, htop, iftop, openssl, tig, composer, httpie, nmap, php71, git, subversion, node, python3, thefuck, wget, yarn, zsh, zsh-completions)
-  10. Applications (alfred, google-chrome, slack, spotify, sublime-text, vlc, phpstorm, sequel-pro, filezilla, postman, iterm2, teamviewer, lastpass, spectacle, appcleaner, skype)
+  10. Applications (alfred, google-chrome, slack, spotify, sublime-text, vlc, phpstorm, sequel-pro, filezilla, postman, hyper, teamviewer, lastpass, spectacle, appcleaner, skype)
   11. Homestead or Valet (installation script will ask you, leave empty for nothing, if homestead is selected virtualbox and vagrant will be installed via brew, if valet mysql will be installed)
   12. `dotfiles` binary to manage dotfiles functions with autocomplete
 ## Install
@@ -27,7 +27,7 @@ Clone and install dotfiles:
 	
     git clone https://github.com/mihaliak/dotfiles.git ~/dotfiles
     cd ~/dotfiles
-    git checkout v2.9
+    git checkout v3.0
     cd ~/dotfiles/install
     chmod +wx install.sh
     chmod -R +wx ~/dotfiles/bin
@@ -36,10 +36,9 @@ Clone and install dotfiles:
 ## Additional steps
 
 1. Install fonts
-2. In iterm `Preferences > General > Load preferences from a custom folder or URL` and set it to `~/dotfiles/iterm`
-3. Import PhpStorm settings
-4. `sudo reboot`
-5. Enjoy
+2. Import PhpStorm settings
+3. `sudo reboot`
+4. Enjoy
 
 ## The `dotfiles` command
 
