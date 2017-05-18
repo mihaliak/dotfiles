@@ -57,3 +57,12 @@ extract () {
         echo "${RED}Error: '$1' is not a valid file${NC}"
     fi
 }
+
+function xterm_title_precmd () {
+    print -Pn '\e]2;%~\a'
+}
+
+function xterm_title_preexec () {
+    print -Pn '\e]2;'
+    print -n "${(q)1}\a"
+}
