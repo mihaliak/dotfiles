@@ -1,3 +1,26 @@
+/* #window */
 .tab_textActive {
-	background: transparent !important; box-shadow: none !important;
+	background: transparent !important;
+	box-shadow: none !important;
+}
+
+.tab_tab {
+	background-color: transparent;
+}
+
+.tab_active {
+	background-color: rgba(0, 0, 0, .3) !important;
+}
+
+/* #terminal */
+x-screen {
+	color: rgb(183, 179, 166) !important;
+}
+
+x-screen a {
+	color: rgb(244, 156, 32);
+}
+
+x-row {
+	line-height: normal;
 }

@@ -1,3 +1,4 @@
+// -- hyper-stylesheet-hash:e452f0da3bb4308d176ff27063fc5656 --
 // Future versions of Hyper may add additional config options,
 // which will not automatically be merged into this file.
 // See https://hyper.is#cfg for all currently supported options.
@@ -5,10 +6,10 @@
 module.exports = {
   config: {
     // default font size in pixels for all tabs
-    fontSize: 15,
+    fontSize: 14,
 
     // font family with optional fallbacks
-    fontFamily: 'Inconsolata, Inconsolata For Powerline, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: 'Fira Code, Inconsolata, Inconsolata For Powerline, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: 'rgba(248,28,229,0.8)',
@@ -96,9 +97,6 @@ module.exports = {
     // bellSoundURL: 'http://example.com/bell.mp3',
 
     // for advanced config flags please refer to https://hyper.is/#cfg
-    hyperStatusLine: {
-      footerTransparent: false,
-    },
     hyperTabs: {
       trafficButtons: true,
       tabIconsColored: true,
@@ -115,15 +113,17 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-  'hyper-ayu',
   'hyper-tabs-enhanced',
   'hyper-dark-scrollbar',
   'hyper-stylesheet',
-  'hyperterm-alternatescroll'
+  'hyperterm-alternatescroll',
+  'hyperlinks',
+  'hyper-sierra-vibrancy'
   ],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed
-  localPlugins: []
+  localPlugins: [
+  ]
 };
