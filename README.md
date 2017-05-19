@@ -9,7 +9,7 @@ Contains:
   3. [Global aliases](https://github.com/mihaliak/dotfiles/blob/master/dots/.aliases) 
   4. [Functions](https://github.com/mihaliak/dotfiles/blob/master/dots/.functions) for homestead, colored `man` page, `mk` for making folder and entering it, `extract` to extract any compressed file, `e` to read .env file variables in `pwd`
   5. Custom [/etc/hosts](https://github.com/mihaliak/dotfiles/blob/master/etc/hosts) file with blocked Ads, Trackers & 🔥 stuff on internet
-  6. `Inconsolata` font used in Hyper, PhpStorm, Sublime
+  6. `Inconsolata` font used in PhpStorm, Sublime, `Fira Code` used in Hyper
   7. Hyper with settings and custom css, oh-my-zsh taybalt theme
   8. `ssh-manager` command to manage ssh config hosts and keys, including copy public keys to clipboard, transfer to server and more with autocomplete
   9. Packages / CLI (brew, brew cask, dockutil, htop, iftop, openssl, tig, composer, httpie, nmap, php71, git, subversion, node, python3, thefuck, wget, yarn, zsh, zsh-completions)
@@ -27,7 +27,7 @@ Clone and install dotfiles:
 	
     git clone https://github.com/mihaliak/dotfiles.git ~/dotfiles
     cd ~/dotfiles
-    git checkout v3.2
+    git checkout v3.3
     cd ~/dotfiles/install
     chmod +wx install.sh
     chmod -R +wx ~/dotfiles/bin
