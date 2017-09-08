@@ -1,7 +1,7 @@
 # Dotfiles
 Dotfiles I use with MacOS Sierra mostly for Web Development.
 
-![Hyper.app](https://raw.github.com/mihaliak/dotfiles/master/screenshot.png)
+![iTerm2.app](https://raw.github.com/mihaliak/dotfiles/master/screenshot.png)
 
 Contains:
   1. [System defaults](https://github.com/mihaliak/dotfiles/blob/master/macos/defaults.sh) and [Dock icons setup](https://github.com/mihaliak/dotfiles/blob/master/macos/dock.sh) 
@@ -27,7 +27,7 @@ Clone and install dotfiles:
 	
     git clone https://github.com/mihaliak/dotfiles.git ~/dotfiles
     cd ~/dotfiles
-    git checkout v3.3
+    git checkout v3.4
     cd ~/dotfiles/install
     chmod +wx install.sh
     chmod -R +wx ~/dotfiles/bin
