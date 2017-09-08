@@ -62,7 +62,7 @@ brew cask install --appdir="/Applications" spectacle
 brew cask install --appdir="/Applications" appcleaner
 brew cask install --appdir="/Applications" skype
 brew cask install --appdir="/Applications" the-unarchiver
-brew cask install --appdir="/Applications" hyper
+brew cask install --appdir="/Applications" iterm2
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook qlvideo
