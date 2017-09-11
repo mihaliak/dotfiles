@@ -52,7 +52,6 @@ brew cask install --appdir="/Applications" google-chrome
 brew cask install --appdir="/Applications" slack
 brew cask install --appdir="/Applications" spotify
 brew cask install --appdir="/Applications" sublime-text
-brew cask install --appdir="/Applications" vlc
 brew cask install --appdir="/Applications" phpstorm
 brew cask install --appdir="/Applications" sequel-pro
 brew cask install --appdir="/Applications" filezilla
@@ -63,6 +62,8 @@ brew cask install --appdir="/Applications" appcleaner
 brew cask install --appdir="/Applications" skype
 brew cask install --appdir="/Applications" the-unarchiver
 brew cask install --appdir="/Applications" iterm2
+brew cask install --appdir="/Applications" fork
+brew cask install iina
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook qlvideo

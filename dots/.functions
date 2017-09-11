@@ -68,5 +68,5 @@ function xterm_title_preexec () {
 }
 
 function youtube_song () {
-    youtube-dl --audio-format aac -x "$@"
+    youtube-dl --audio-format m4a -x "$@"
 }

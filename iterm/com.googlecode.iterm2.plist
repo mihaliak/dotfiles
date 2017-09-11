@@ -393,12 +393,14 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
+	<key>NSWindow Frame NSFontPanel</key>
+	<string>293 75 445 77 0 0 1280 778 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>125 174 918 512 0 0 1280 778 </string>
+	<string>123 232 918 498 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 73 1276 705 0 0 1280 778 </string>
+	<string>3 57 1274 715 0 0 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>152 50 1060 507 0 0 1280 778 </string>
+	<string>70 42 1210 537 0 0 1280 778 </string>
 	<key>NeverWarnAboutShortLivedSessions_0757B11A-8C62-47E3-8A70-9A327C9A03C1</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_0757B11A-8C62-47E3-8A70-9A327C9A03C1_selection</key>
@@ -651,7 +653,9 @@
 			<key>Blinking Cursor</key>
 			<false/>
 			<key>Blur</key>
-			<false/>
+			<true/>
+			<key>Blur Radius</key>
+			<real>21.284615384615389</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -1061,7 +1065,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>InconsolataForPowerline 14</string>
+			<string>FiraCode-Regular 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Option Key Sends</key>
@@ -1115,7 +1119,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.044080528846153849</real>
+			<real>0.15031897189349111</real>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -1202,7 +1206,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-04-14T10:50:32Z</date>
+	<date>2017-09-08T14:08:28Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>

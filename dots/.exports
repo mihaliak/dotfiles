@@ -1,2 +1,2 @@
 export EDITOR=nano
-export PATH="$HOME/dotfiles/bin:/usr/local/sbin:$HOME/.config/yarn/global/node_modules/.bin:/usr/local/opt/php71/bin:$HOME/.composer/vendor/bin:/usr/local/bin:/opt/subversion/bin:$PATH"
+export PATH="$HOME/dotfiles/bin:/usr/local/sbin:$HOME/.config/yarn/global/node_modules/.bin:/usr/local/opt/php71/bin:$HOME/.composer/vendor/bin:/usr/local/bin:/opt/subversion/bin:/usr/local/opt/sqlite/bin:$PATH"
