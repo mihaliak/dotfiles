@@ -19,7 +19,7 @@ sub_help () {
     echo
     echo "Commands:"
     echo "   help             This help message"
-    echo "   update           Update packages and pkg managers (OS, brew, npm, yarn, commposer)"
+    echo "   update           Update packages and pkg managers (OS, brew, node, npm, yarn, commposer)"
     echo "   clean            Clean up caches (brew, npm, yarn, composer)"
     echo "   symlinks         Run symlinks script"
     echo "   brew             Run brew script"
@@ -33,13 +33,9 @@ sub_help () {
 
 sub_update () {
     sudo softwareupdate -i -a
+    sudo n lts # install last lts node instance
     brew update
     brew upgrade
-    npm install npm -g
-    npm update -g
-    yarn self-update 2> /dev/null
-    composer self-update 2> /dev/null
-    composer global update composer/composer 2>/dev/null
     echo -e "${GREEN}$ARROW Success! Update command finished.${NC}"
 }
 
