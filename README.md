@@ -27,7 +27,7 @@ Clone and install dotfiles:
 	
     git clone https://github.com/mihaliak/dotfiles.git ~/dotfiles
     cd ~/dotfiles
-    git checkout v3.4
+    git checkout v3.5
     cd ~/dotfiles/install
     chmod +wx install.sh
     chmod -R +wx ~/dotfiles/bin
