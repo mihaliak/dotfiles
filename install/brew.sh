@@ -17,8 +17,10 @@ brew install tig
 brew install composer
 brew install httpie
 brew install nmap
-brew install homebrew/php/php71
-brew install php71-xdebug
+brew install homebrew/php/php72
+brew install php72-xdebug
+brew install php72-imagick
+brew install php72-redis
 brew install git
 brew install subversion
 brew install node
