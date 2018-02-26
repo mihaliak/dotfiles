@@ -35,6 +35,7 @@ brew install sqlmap
 brew install aircrack-ng
 brew install unrar
 brew install wifi-password
+brew install mysql
 
 # Wait a bit before moving on...
 sleep 1
@@ -75,24 +76,3 @@ sleep 1
 
 # ...and then.
 echo "Success! Brew additional applications are installed."
-
-if [ "$softwareToInstall" -eq 1 ] ; then
-	brew install mysql
-
-	# Wait a bit before moving on...
-	sleep 1
-
-	# ...and then.
-	echo "Success! MySQL installed ready to install valet."
-else 
-	if [ "$softwareToInstall" -eq 2 ] ; then
-	    brew cask install --appdir="/Applications" virtualbox
-		brew cask install --appdir="/Applications" vagrant
-
-		# Wait a bit before moving on...
-		sleep 1
-
-		# ...and then.
-		echo "Success! VirtualBox, Vagrant installed ready to install homestead."
-	fi
-fi

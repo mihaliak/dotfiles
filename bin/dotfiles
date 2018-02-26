@@ -23,7 +23,6 @@ sub_help () {
     echo "   clean            Clean up caches (brew, npm, yarn, composer)"
     echo "   symlinks         Run symlinks script"
     echo "   brew             Run brew script"
-    echo "   homestead        Run homestead script"
     echo "   valet            Run valet script"
     echo "   ohmyzsh          Run oh my zsh script"
     echo "   hosts            Run hosts script"
@@ -56,11 +55,6 @@ sub_symlinks () {
 sub_brew () {
     . "$DOTFILES_DIR/install/brew.sh"
     echo -e "${GREEN}$ARROW Success! Brew command finished.${NC}"
-}
-
-sub_homestead () {
-    . "$DOTFILES_DIR/install/homestead.sh"
-    echo -e "${GREEN}$ARROW Success! Homestead command finished.${NC}"
 }
 
 sub_valet () {

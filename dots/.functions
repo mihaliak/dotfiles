@@ -6,10 +6,6 @@ function artisan() {
     php artisan "$@"
 }
 
-function h() {
-    ( cd ~/Homestead && vagrant $* )
-}
-
 man() {
 	env \
 		LESS_TERMCAP_mb=$(printf "\e[1;31m") \
@@ -70,3 +66,12 @@ function xterm_title_preexec () {
 function youtube_song () {
     youtube-dl --audio-format m4a -x "$@"
 }
+
+function code () {
+    if [ $1 ]; then
+        cd ~/Code/$1
+    else
+        cd ~/Code
+    fi
+}
+
