@@ -16,7 +16,8 @@ Contains:
   10. Applications (alfred, google-chrome, slack, spotify, sublime-text, vlc, phpstorm, sequel-pro, filezilla, postman, iterm2, teamviewer, lastpass, spectacle, appcleaner, skype)
   11. Valet for web development
   12. `dotfiles` binary to manage dotfiles functions with autocomplete
-  13. `code` function to cd into project with directory autocomplete (`code dotfiles` will move you into `~/Code/dotfiles`, with directories `dotfiles` and `dots` and typing `code dot` then hitting tab will autocomplete you directories matching name `dot`)
+  13. `switch-php` binary to switch php versions (using `brew link` `brew service` and `valet`)
+  14. `code` function to cd into project with directory autocomplete (`code dotfiles` will move you into `~/Code/dotfiles`, with directories `dotfiles` and `dots` and typing `code dot` then hitting tab will autocomplete you directories matching name `dot`)
 ## Install
 
 On fresh installation of MacOS:
@@ -28,7 +29,7 @@ Clone and install dotfiles:
 	
     git clone https://github.com/mihaliak/dotfiles.git ~/dotfiles
     cd ~/dotfiles
-    git checkout v3.7
+    git checkout v3.8
     cd ~/dotfiles/install
     chmod +wx install.sh
     chmod -R +wx ~/dotfiles/bin
@@ -73,6 +74,17 @@ Clone and install dotfiles:
        host             Add host to SSH config, use --key to generate new key
        remove           Remove host from SSH config
        list-host        List of all hosts in SSH config
+
+## The `switch-php` command
+
+    $ switch-php
+    ￫ Usage: switch-php <version>
+    ￫ Current PHP Version: 72
+    ￫ Available Versions:
+      - 56
+      - 70
+      - 71
+      - 72
 
 ## Credits
 
