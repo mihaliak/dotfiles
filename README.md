@@ -12,7 +12,7 @@ Contains:
   6. `Inconsolata` font used in PhpStorm, Sublime, `Fira Code` used in iTerm2
   7. iTerm2 profile, oh-my-zsh taybalt theme
   8. `ssh-manager` command to manage ssh config hosts and keys, including copy public keys to clipboard, transfer to server and more with autocomplete
-  9. Packages / CLI (brew, brew cask, dockutil, htop, iftop, openssl, tig, composer, httpie, nmap, php71, git, subversion, node, python3, thefuck, wget, yarn, zsh, zsh-completions)
+  9. Packages / CLI (brew, brew cask, dockutil, htop, iftop, openssl, tig, composer, httpie, nmap, php71, git, subversion, nvmm, node, npm, python3, thefuck, wget, yarn, zsh, zsh-completions)
   10. Applications (alfred, google-chrome, slack, spotify, sublime-text, vlc, phpstorm, sequel-pro, filezilla, postman, iterm2, teamviewer, lastpass, spectacle, appcleaner, skype)
   11. Valet for web development
   12. `dotfiles` binary to manage dotfiles functions with autocomplete
@@ -29,7 +29,7 @@ Clone and install dotfiles:
 	
     git clone https://github.com/mihaliak/dotfiles.git ~/dotfiles
     cd ~/dotfiles
-    git checkout v3.8
+    git checkout v3.9
     cd ~/dotfiles/install
     chmod +wx install.sh
     chmod -R +wx ~/dotfiles/bin

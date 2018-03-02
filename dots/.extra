@@ -10,3 +10,5 @@ if [[ "$TERM" == (screen*|xterm*|rxvt*) ]]; then
 fi
 
 compctl -W ~/Code -/ code
+
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm

@@ -36,11 +36,9 @@ brew install php72-yaml
 brew install php72-mongodb
 brew install git
 brew install subversion
-brew install node
 brew install python3
 brew install thefuck
 brew install wget
-brew install yarn
 brew install zsh
 brew install zsh-completions
 brew install webkit2png

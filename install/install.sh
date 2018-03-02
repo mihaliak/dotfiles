@@ -4,6 +4,9 @@
 # Install composer global packages
 . "$DOTFILES_DIR/install/composer.sh"
 
+# Install nvm, node, npm, yarn
+. "$DOTFILES_DIR/install/node_setup.sh"
+
 # Install npm global packages
 . "$DOTFILES_DIR/install/yarn.sh"
 

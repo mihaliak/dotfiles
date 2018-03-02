@@ -23,6 +23,7 @@ sub_help () {
     echo "   clean            Clean up caches (brew, npm, yarn, composer)"
     echo "   symlinks         Run symlinks script"
     echo "   brew             Run brew script"
+    echo "   node             Run node setup script"
     echo "   valet            Run valet script"
     echo "   ohmyzsh          Run oh my zsh script"
     echo "   hosts            Run hosts script"
@@ -55,6 +56,11 @@ sub_symlinks () {
 sub_brew () {
     . "$DOTFILES_DIR/install/brew.sh"
     echo -e "${GREEN}$ARROW Success! Brew command finished.${NC}"
+}
+
+sub_node () {
+    . "$DOTFILES_DIR/install/node_setup.sh"
+    echo -e "${GREEN}$ARROW Success! Node setup command finished.${NC}"
 }
 
 sub_valet () {
