@@ -12,12 +12,11 @@ Contains:
   6. `Inconsolata` font used in PhpStorm, Sublime, `Fira Code` used in iTerm2
   7. iTerm2 profile, oh-my-zsh taybalt theme
   8. `ssh-manager` command to manage ssh config hosts and keys, including copy public keys to clipboard, transfer to server and more with autocomplete
-  9. Packages / CLI (brew, brew cask, dockutil, htop, iftop, openssl, tig, composer, httpie, nmap, php71, git, subversion, nvmm, node, npm, python3, thefuck, wget, yarn, zsh, zsh-completions)
+  9. Packages / CLI (brew, brew cask, dockutil, htop, iftop, openssl, tig, composer, nmap, php70, php71, php72, git, subversion, nvm with node/npm (node 6.2 with latest working npm, LTS node with latest working npm), python3, thefuck, wget, yarn, zsh, zsh-completions, sqlmap, aircrack-ng)
   10. Applications (alfred, google-chrome, slack, spotify, sublime-text, vlc, phpstorm, sequel-pro, filezilla, postman, iterm2, teamviewer, lastpass, spectacle, appcleaner, skype)
-  11. Valet for web development
+  11. [Valet for web development](https://github.com/laravel/valet)
   12. `dotfiles` binary to manage dotfiles functions with autocomplete
-  13. `switch-php` binary to switch php versions (using `brew link` `brew service` and `valet`)
-  14. `code` function to cd into project with directory autocomplete (`code dotfiles` will move you into `~/Code/dotfiles`, with directories `dotfiles` and `dots` and typing `code dot` then hitting tab will autocomplete you directories matching name `dot`)
+  13. `code` function to cd into project with directory autocomplete (`code dotfiles` will move you into `~/Code/dotfiles`, with directories `dotfiles` and `dots` and typing `code dot` then hitting tab will autocomplete you directories matching name `dot`)
 ## Install
 
 On fresh installation of MacOS:
@@ -29,7 +28,7 @@ Clone and install dotfiles:
 	
     git clone https://github.com/mihaliak/dotfiles.git ~/dotfiles
     cd ~/dotfiles
-    git checkout v3.9
+    git checkout v3.10
     cd ~/dotfiles/install
     chmod +wx install.sh
     chmod -R +wx ~/dotfiles/bin
@@ -54,6 +53,7 @@ Clone and install dotfiles:
        clean            Clean up caches (brew, npm, yarn, composer)
        symlinks         Run symlinks script
        brew             Run brew script
+       node             Run node setup script
        valet            Run valet script
        ohmyzsh          Run oh my zsh script
        hosts            Run hosts script
@@ -74,17 +74,6 @@ Clone and install dotfiles:
        host             Add host to SSH config, use --key to generate new key
        remove           Remove host from SSH config
        list-host        List of all hosts in SSH config
-
-## The `switch-php` command
-
-    $ switch-php
-    ￫ Usage: switch-php <version>
-    ￫ Current PHP Version: 72
-    ￫ Available Versions:
-      - 56
-      - 70
-      - 71
-      - 72
 
 ## Credits
 

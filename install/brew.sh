@@ -15,7 +15,6 @@ brew install iftop
 brew install openssl
 brew install tig
 brew install composer
-brew install httpie
 brew install nmap
 brew install php70
 brew install php70-redis
@@ -31,7 +30,6 @@ brew install php71-mongodb
 brew unlink php71
 brew install php72
 brew install php72-redis
-brew install php72-mcrypt
 brew install php72-yaml
 brew install php72-mongodb
 brew install git
@@ -76,8 +74,6 @@ brew cask install --appdir="/Applications" appcleaner
 brew cask install --appdir="/Applications" skype
 brew cask install --appdir="/Applications" the-unarchiver
 brew cask install --appdir="/Applications" iterm2
-brew cask install --appdir="/Applications" fork
-brew cask install iina
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook qlvideo
