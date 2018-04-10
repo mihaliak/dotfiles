@@ -75,3 +75,6 @@ function code () {
     fi
 }
 
+function sphp() {
+    brew-php-switcher "$@" -s
+}

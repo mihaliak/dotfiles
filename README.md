@@ -7,12 +7,12 @@ Contains:
   1. [System defaults](https://github.com/mihaliak/dotfiles/blob/master/macos/defaults.sh) and [Dock icons setup](https://github.com/mihaliak/dotfiles/blob/master/macos/dock.sh) 
   2. [Git config with aliases](https://github.com/mihaliak/dotfiles/blob/master/dots/.gitconfig), [Git global ignore](https://github.com/mihaliak/dotfiles/blob/master/dots/.gitignore_global)
   3. [Global aliases](https://github.com/mihaliak/dotfiles/blob/master/dots/.aliases) 
-  4. [Functions](https://github.com/mihaliak/dotfiles/blob/master/dots/.functions), colored `man` page, `mk` for making folder and entering it, `extract` to extract any compressed file, `e` to read .env file variables in `pwd`
+  4. [Functions](https://github.com/mihaliak/dotfiles/blob/master/dots/.functions), colored `man` page, `mk` for making folder and entering it, `extract` to extract any compressed file, `e` to read .env file variables in `pwd`, `sphp` to switch php versions using brew-php-switcher with skip for apache
   5. Custom [/etc/hosts](https://github.com/mihaliak/dotfiles/blob/master/etc/hosts) file with blocked Ads, Trackers & 🔥 stuff on internet
   6. `Inconsolata` font used in PhpStorm, Sublime, `Fira Code` used in iTerm2
   7. iTerm2 profile, oh-my-zsh taybalt theme
   8. `ssh-manager` command to manage ssh config hosts and keys, including copy public keys to clipboard, transfer to server and more with autocomplete
-  9. Packages / CLI (brew, brew cask, dockutil, htop, iftop, openssl, tig, composer, nmap, php70, php71, php72, git, subversion, nvm with node/npm (node 6.2 with latest working npm, LTS node with latest working npm), python3, thefuck, wget, yarn, zsh, zsh-completions, sqlmap, aircrack-ng)
+  9. Packages / CLI (brew, brew cask, dockutil, htop, iftop, openssl, tig, composer, nmap, php70, php71, php72, brew-php-switcher, git, subversion, nvm with node/npm (node 6.2 with latest working npm, LTS node with latest working npm), python3, thefuck, wget, yarn, zsh, zsh-completions, sqlmap, aircrack-ng)
   10. Applications (alfred, google-chrome, slack, spotify, sublime-text, vlc, phpstorm, sequel-pro, filezilla, postman, iterm2, teamviewer, lastpass, spectacle, appcleaner, skype)
   11. [Valet for web development](https://github.com/laravel/valet)
   12. `dotfiles` binary to manage dotfiles functions with autocomplete
@@ -28,7 +28,7 @@ Clone and install dotfiles:
 	
     git clone https://github.com/mihaliak/dotfiles.git ~/dotfiles
     cd ~/dotfiles
-    git checkout v3.10
+    git checkout v3.11
     cd ~/dotfiles/install
     chmod +wx install.sh
     chmod -R +wx ~/dotfiles/bin
