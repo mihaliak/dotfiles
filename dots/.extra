@@ -9,6 +9,4 @@ if [[ "$TERM" == (screen*|xterm*|rxvt*) ]]; then
 	add-zsh-hook -Uz preexec xterm_title_preexec
 fi
 
-compctl -W ~/Code -/ code
-
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm

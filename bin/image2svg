@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+File=$1
+FileWithoutExtension="${File%.*}"
+
+ARROW="￫"
+GREEN='\033[0;32m'
+NC='\033[0m'
+
+convert "$File" "$FileWithoutExtension.pnm" # Image to PNM
+potrace "$FileWithoutExtension.pnm" -s -o "$FileWithoutExtension.svg" # PNM to SVG
+rm "$FileWithoutExtension.pnm" # Remove PNM
+
+echo -e "${GREEN}$ARROW Image successfully converted to SVG.${NC}"

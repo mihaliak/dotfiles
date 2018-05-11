@@ -14,5 +14,6 @@ alias rmds="find . -type f -name '*.DS_Store' -ls -delete"
 
 alias flushdns='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;echo "✌️ DNS flushed"'
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 alias -g @="| grep -i"

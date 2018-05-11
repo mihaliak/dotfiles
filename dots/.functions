@@ -67,14 +67,6 @@ function youtube_song () {
     youtube-dl --audio-format m4a -x "$@"
 }
 
-function code () {
-    if [ $1 ]; then
-        cd ~/Code/$1
-    else
-        cd ~/Code
-    fi
-}
-
 function sphp() {
-    brew-php-switcher "$@" -s
+    brew-php-switcher "$@" -c=valet
 }

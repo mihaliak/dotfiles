@@ -3,8 +3,6 @@
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap homebrew/versions
 brew tap homebrew/dupes
-brew tap Goles/battery
-brew tap homebrew/php
 brew update
 brew upgrade
 
@@ -33,12 +31,14 @@ brew install aircrack-ng
 brew install unrar
 brew install wifi-password
 brew install mysql
+brew install potrace
 
 # Wait a bit before moving on...
 sleep 1
 
 # ...and then.
 echo "Success! Basic brew packages are installed."
+echo "Use pecl install <package> to install additional PHP extensions. Example: pecl install imagick"
 
 # Cask
 brew tap caskroom/cask
@@ -62,6 +62,7 @@ brew cask install --appdir="/Applications" appcleaner
 brew cask install --appdir="/Applications" skype
 brew cask install --appdir="/Applications" the-unarchiver
 brew cask install --appdir="/Applications" iterm2
+brew cask install --appdir="/Applications" apple-juice
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook qlvideo
