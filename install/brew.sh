@@ -1,8 +1,7 @@
 # Install Homebrew
 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew tap homebrew/versions
-brew tap homebrew/dupes
+brew tap shivammathur/php
 brew update
 brew upgrade
 
@@ -14,9 +13,12 @@ brew install openssl
 brew install tig
 brew install composer
 brew install nmap
-brew install php@7.0
-brew install php@7.1
-brew install php@7.2
+brew install shivammathur/php/php@7.0
+brew install shivammathur/php/php@7.1
+brew install shivammathur/php/php@7.2
+brew install shivammathur/php/php@7.3
+brew install shivammathur/php/php@7.4
+brew install shivammathur/php/php@8.0
 brew install brew-php-switcher
 brew install git
 brew install subversion
@@ -53,16 +55,18 @@ brew install --cask --appdir="/Applications" slack
 brew install --cask --appdir="/Applications" spotify
 brew install --cask --appdir="/Applications" sublime-text
 brew install --cask --appdir="/Applications" phpstorm
-brew install --cask --appdir="/Applications" sequel-pro
+brew install --cask --appdir="/Applications" tableplus
 brew install --cask --appdir="/Applications" filezilla
 brew install --cask --appdir="/Applications" postman
-brew install --cask --appdir="/Applications" teamviewer
+brew install --cask --appdir="/Applications" forklift
 brew install --cask --appdir="/Applications" spectacle
 brew install --cask --appdir="/Applications" appcleaner
 brew install --cask --appdir="/Applications" skype
 brew install --cask --appdir="/Applications" the-unarchiver
-brew install --cask --appdir="/Applications" iterm2
+brew install --cask --appdir="/Applications" hyper
 brew install --cask --appdir="/Applications" apple-juice
+brew install --cask --appdir="/Applications" sourcetree
+brew install --cask --appdir="/Applications" hiddenbar
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook qlvideo
