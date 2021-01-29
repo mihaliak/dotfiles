@@ -47,25 +47,25 @@ brew tap caskroom/versions
 
 # Install cask packages
 
-brew cask install --appdir="/Applications" alfred
-brew cask install --appdir="/Applications" google-chrome
-brew cask install --appdir="/Applications" slack
-brew cask install --appdir="/Applications" spotify
-brew cask install --appdir="/Applications" sublime-text
-brew cask install --appdir="/Applications" phpstorm
-brew cask install --appdir="/Applications" sequel-pro
-brew cask install --appdir="/Applications" filezilla
-brew cask install --appdir="/Applications" postman
-brew cask install --appdir="/Applications" teamviewer
-brew cask install --appdir="/Applications" spectacle
-brew cask install --appdir="/Applications" appcleaner
-brew cask install --appdir="/Applications" skype
-brew cask install --appdir="/Applications" the-unarchiver
-brew cask install --appdir="/Applications" iterm2
-brew cask install --appdir="/Applications" apple-juice
+brew install --cask --appdir="/Applications" alfred
+brew install --cask --appdir="/Applications" google-chrome
+brew install --cask --appdir="/Applications" slack
+brew install --cask --appdir="/Applications" spotify
+brew install --cask --appdir="/Applications" sublime-text
+brew install --cask --appdir="/Applications" phpstorm
+brew install --cask --appdir="/Applications" sequel-pro
+brew install --cask --appdir="/Applications" filezilla
+brew install --cask --appdir="/Applications" postman
+brew install --cask --appdir="/Applications" teamviewer
+brew install --cask --appdir="/Applications" spectacle
+brew install --cask --appdir="/Applications" appcleaner
+brew install --cask --appdir="/Applications" skype
+brew install --cask --appdir="/Applications" the-unarchiver
+brew install --cask --appdir="/Applications" iterm2
+brew install --cask --appdir="/Applications" apple-juice
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook qlvideo
+brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook qlvideo
 
 # Wait a bit before moving on...
 sleep 1

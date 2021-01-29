@@ -3,6 +3,7 @@
 /vendor
 /node_modules
 /brew_components
+.ignored-stuff
 .idea
 
 !.gitkeep

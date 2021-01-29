@@ -6,6 +6,10 @@ function artisan() {
     php artisan "$@"
 }
 
+function composer() {
+    php -d memory_limit=-1 /usr/local/bin/composer "$@"
+}
+
 man() {
 	env \
 		LESS_TERMCAP_mb=$(printf "\e[1;31m") \
@@ -65,8 +69,4 @@ function xterm_title_preexec () {
 
 function youtube_song () {
     youtube-dl --audio-format m4a -x "$@"
-}
-
-function sphp() {
-    brew-php-switcher "$@" -c=valet
 }

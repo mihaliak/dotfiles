@@ -2,7 +2,7 @@
 	"always_show_minimap_viewport": true,
 	"auto_complete": false,
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/ayu/ayu-mirage.tmTheme",
+	"color_scheme": "Packages/ayu/ayu-mirage.sublime-color-scheme",
 	"enable_tab_scrolling": false,
 	"font_face": "Inconsolata for PowerLine",
 	"font_size": 16,
