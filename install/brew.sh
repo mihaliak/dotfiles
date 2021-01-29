@@ -67,6 +67,7 @@ brew install --cask --appdir="/Applications" hyper
 brew install --cask --appdir="/Applications" apple-juice
 brew install --cask --appdir="/Applications" sourcetree
 brew install --cask --appdir="/Applications" hiddenbar
+brew install --appdir="/Applications" bear
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook qlvideo
