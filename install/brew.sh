@@ -34,13 +34,16 @@ brew install unrar
 brew install wifi-password
 brew install mysql
 brew install potrace
+brew install imagick
+brew install autoconf
+brew install pkg-config
+pecl install imagick
 
 # Wait a bit before moving on...
 sleep 1
 
 # ...and then.
 echo "Success! Basic brew packages are installed."
-echo "Use pecl install <package> to install additional PHP extensions. Example: pecl install imagick"
 
 # Cask
 brew tap caskroom/cask
@@ -56,7 +59,6 @@ brew install --cask --appdir="/Applications" spotify
 brew install --cask --appdir="/Applications" sublime-text
 brew install --cask --appdir="/Applications" phpstorm
 brew install --cask --appdir="/Applications" tableplus
-brew install --cask --appdir="/Applications" filezilla
 brew install --cask --appdir="/Applications" postman
 brew install --cask --appdir="/Applications" forklift
 brew install --cask --appdir="/Applications" spectacle
@@ -67,7 +69,6 @@ brew install --cask --appdir="/Applications" hyper
 brew install --cask --appdir="/Applications" apple-juice
 brew install --cask --appdir="/Applications" sourcetree
 brew install --cask --appdir="/Applications" hiddenbar
-brew install --appdir="/Applications" bear
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook qlvideo
