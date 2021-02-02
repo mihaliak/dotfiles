@@ -19,7 +19,6 @@ brew install shivammathur/php/php@7.2
 brew install shivammathur/php/php@7.3
 brew install shivammathur/php/php@7.4
 brew install shivammathur/php/php@8.0
-brew install brew-php-switcher
 brew install git
 brew install subversion
 brew install python3
@@ -38,6 +37,9 @@ brew install imagick
 brew install autoconf
 brew install pkg-config
 pecl install imagick
+brew install azure-cli
+brew install helm
+helm repo add stable https://charts.helm.sh/stable
 
 # Wait a bit before moving on...
 sleep 1
