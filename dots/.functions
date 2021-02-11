@@ -2,6 +2,23 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m'
 
+function dockerize() {
+    CURRENT_DIR="$(pwd)/"
+    TEMPLATE_DIR="${HOME}/Code/template-boilerplate/"
+
+    cp -r "${TEMPLATE_DIR}docker" $CURRENT_DIR
+    cp -r "${TEMPLATE_DIR}deployments" $CURRENT_DIR
+    cp "${TEMPLATE_DIR}.dockerignore" $CURRENT_DIR
+    cp "${TEMPLATE_DIR}.gitlab-ci.template.yml" $CURRENT_DIR
+    cp "${TEMPLATE_DIR}Dockerfile" $CURRENT_DIR
+    cp "${TEMPLATE_DIR}docker-compose.yml" $CURRENT_DIR
+    cp "${TEMPLATE_DIR}docker-setup" $CURRENT_DIR
+
+    echo "${GREEN}SUCCESS: Folder '${CURRENT_DIR}' successfully dockerized${NC}"
+    php docker-setup $1 $2 $3
+    rm docker-setup
+}
+
 function artisan() {
     php artisan "$@"
 }
