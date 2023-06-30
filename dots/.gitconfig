@@ -1,10 +1,11 @@
 [user]
 	name = Andrej Mihaliak
 	email = andrej.mihaliak@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA6XJkv1UW9NY5Ie/L0XZemzXoBtwdVR9zse7hdJIlnl
 [github]
   user = mihaliak
 [core]
-	excludesfile = /Users/nipid/.gitignore_global
+	excludesfile = /Users/andrejmihaliak/.gitignore_global
 [alias]
   a = "add ."
   c = commit
@@ -27,5 +28,15 @@
 	trustExitCode = true
 [commit]
 	template = /Users/nipid/.stCommitMsg
+	gpgsign = true
 [init]
   defaultBranch = main
+[gpg]
+	format = ssh
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

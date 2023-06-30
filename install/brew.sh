@@ -13,12 +13,9 @@ brew install openssl
 brew install tig
 brew install composer
 brew install nmap
-brew install shivammathur/php/php@7.0
-brew install shivammathur/php/php@7.1
-brew install shivammathur/php/php@7.2
-brew install shivammathur/php/php@7.3
 brew install shivammathur/php/php@7.4
 brew install shivammathur/php/php@8.0
+brew install shivammathur/php/php@8.1
 brew install git
 brew install subversion
 brew install python3
@@ -41,12 +38,18 @@ brew install azure-cli
 brew install helm
 helm repo add stable https://charts.helm.sh/stable
 brew install docker
+brew install gnupg2
+brew install pinentry-mac
 
 # Wait a bit before moving on...
 sleep 1
 
 # ...and then.
 echo "Success! Basic brew packages are installed."
+
+# setup GPG for GIT
+echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
+gpgconf --kill gpg-agent
 
 # Cask
 brew tap caskroom/cask

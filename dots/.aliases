@@ -3,9 +3,15 @@ alias .='pwd'
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
-alias t='./vendor/bin/phpunit'
+alias t='(test -f ./vendor/bin/pest && (./vendor/bin/pest || 1)) || ./vendor/bin/phpunit'
+alias tc='(test -f ./vendor/bin/pest && (./vendor/bin/pest --coverage || 1)) || ./vendor/bin/phpunit --coverage'
+alias tp='artisan test --parallel'
 alias clean='artisan cache:clear && artisan view:clear && artisan clear-compiled && artisan route:clear && artisan config:clear && artisan config:cache && artisan route:cache'
 alias path='echo $PATH | tr -s ":" "\n"'
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+alias a='artisan'
+alias sa='sail artisan'
+alias pest='./vendor/bin/pest'
 
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
@@ -17,3 +23,7 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 alias -g @="| grep -i"
+
+alias k=kubectl
+
+alias cat=bat
