@@ -50,13 +50,12 @@ sleep 1
 echo "Success! Basic brew packages are installed."
 
 # setup GPG for GIT
+mkdir ~/.gnupg
 echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
 gpgconf --kill gpg-agent
 
 # Cask
-brew tap caskroom/cask
-brew install brew-cask
-brew tap caskroom/versions
+brew tap homebrew/cask
 
 # Install cask packages
 
@@ -78,7 +77,6 @@ brew install --cask --appdir="/Applications" sourcetree
 brew install --cask --appdir="/Applications" hiddenbar
 brew install --cask --appdir="/Applications" lens
 brew install --cask --appdir="/Applications" tinkerwell
-brew install --cask --appdir="/Applications" slack
 brew install --cask --appdir="/Applications" orbstack
 brew install --cask --appdir="/Applications" 1password
 brew install --cask --appdir="/Applications" rocket-chat
@@ -87,7 +85,7 @@ brew install --cask --appdir="/Applications" monitorcontrol
 brew install --cask --appdir="/Applications" jetbrains-toolbox
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
-brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook qlvideo
+brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook qlvideo
 
 # Wait a bit before moving on...
 sleep 1

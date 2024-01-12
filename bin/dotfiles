@@ -19,8 +19,8 @@ sub_help () {
     echo
     echo "Commands:"
     echo "   help             This help message"
-    echo "   update           Update packages and pkg managers (OS, brew, node, npm, yarn, commposer)"
-    echo "   clean            Clean up caches (brew, npm, yarn, composer)"
+    echo "   update           Update packages and pkg managers (OS, brew, node, npm, commposer)"
+    echo "   clean            Clean up caches (brew, npm, composer)"
     echo "   symlinks         Run symlinks script"
     echo "   brew             Run brew script"
     echo "   node             Run node setup script"
@@ -39,9 +39,7 @@ sub_update () {
 
 sub_clean () {
     brew cleanup
-    brew cask cleanup
     npm cache clean --force
-    yarn cache clean
     composer clear-cache
     echo -e "${GREEN}$ARROW Success! Clean command finished.${NC}"
 }

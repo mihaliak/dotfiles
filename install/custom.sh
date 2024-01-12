@@ -1,5 +1,5 @@
 # Install kubectl
-az aks install-cli
+sudo az aks install-cli
 
 # Install kubectl krew plugin manager
 curl https://krew.sh/ | bash
