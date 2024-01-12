@@ -12,3 +12,5 @@ fi
 nvm use stable > /dev/null
 
 eval $(thefuck --alias)
+
+eval "$(homebrew/bin/brew shellenv)"
