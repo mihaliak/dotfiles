@@ -41,7 +41,7 @@ brew install helm
 helm repo add stable https://charts.helm.sh/stable
 brew install gnupg2
 brew install pinentry-mac
-brew install wireguard-tools
+brew install gh
 
 # Wait a bit before moving on...
 sleep 1
@@ -72,8 +72,6 @@ brew install --cask --appdir="/Applications" appcleaner
 brew install --cask --appdir="/Applications" skype
 brew install --cask --appdir="/Applications" the-unarchiver
 brew install --cask --appdir="/Applications" hyper
-brew install --cask --appdir="/Applications" apple-juice
-brew install --cask --appdir="/Applications" sourcetree
 brew install --cask --appdir="/Applications" hiddenbar
 brew install --cask --appdir="/Applications" lens
 brew install --cask --appdir="/Applications" tinkerwell
@@ -84,6 +82,7 @@ brew install --cask --appdir="/Applications" whatsapp
 brew install --cask --appdir="/Applications" monitorcontrol
 brew install --cask --appdir="/Applications" jetbrains-toolbox
 brew install --cask --appdir="/Applications" telegram
+brew install --cask --appdir="/Applications" appcleaner
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook qlvideo
