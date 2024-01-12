@@ -9,5 +9,5 @@ ln -sfv "$DOTFILES_DIR/dots/.inputrc" ~
 ln -sfv "$DOTFILES_DIR/dots/.bash_profile" ~
 ln -sfv "$DOTFILES_DIR/dots/.hyper.js" ~
 ln -sfv "$DOTFILES_DIR/oh-my-zsh/themes/taybalt.zsh-theme" ~/.oh-my-zsh/themes
-ln -sfv "$DOTFILES_DIR/editors/Default (OSX).sublime-keymap" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap"
-ln -sfv "$DOTFILES_DIR/editors/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+ln -sfv "$DOTFILES_DIR/editors/Default (OSX).sublime-keymap" "$HOME/Library/Application Support/Sublime Text/Packages/User/Default (OSX).sublime-keymap"
+ln -sfv "$DOTFILES_DIR/editors/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings"

@@ -83,6 +83,7 @@ brew install --cask --appdir="/Applications" rocket-chat
 brew install --cask --appdir="/Applications" whatsapp
 brew install --cask --appdir="/Applications" monitorcontrol
 brew install --cask --appdir="/Applications" jetbrains-toolbox
+brew install --cask --appdir="/Applications" telegram
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook qlvideo
