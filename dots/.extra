@@ -11,6 +11,6 @@ fi
 
 nvm use stable > /dev/null
 
-eval $(thefuck --alias)
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
-eval "$(homebrew/bin/brew shellenv)"
+eval $(thefuck --alias)
