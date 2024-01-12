@@ -2,14 +2,14 @@
 	"always_show_minimap_viewport": true,
 	"auto_complete": false,
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/ayu/ayu-mirage.sublime-color-scheme",
+	"color_scheme": "Packages/ayu/ayu-light.sublime-color-scheme",
 	"enable_tab_scrolling": false,
-	"font_face": "Inconsolata for PowerLine",
-	"font_size": 16,
+	"font_face": "Source Code Pro",
+	"font_size": 13,
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
 	],
 	"indent_guide_options":
 	[
@@ -19,7 +19,7 @@
 	"line_padding_bottom": 3,
 	"line_padding_top": 3,
 	"overlay_scroll_bars": "enabled",
-	"theme": "ayu-mirage.sublime-theme",
+	"theme": "ayu-light.sublime-theme",
 	"ui_big_tabs": false,
-	"word_wrap": false
+	"word_wrap": false,
 }

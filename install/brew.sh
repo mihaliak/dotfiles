@@ -13,9 +13,9 @@ brew install openssl
 brew install tig
 brew install composer
 brew install nmap
-brew install shivammathur/php/php@7.4
-brew install shivammathur/php/php@8.0
 brew install shivammathur/php/php@8.1
+brew install shivammathur/php/php@8.2
+brew install shivammathur/php/php@8.3
 brew install git
 brew install subversion
 brew install python3
@@ -37,9 +37,9 @@ pecl install imagick
 brew install azure-cli
 brew install helm
 helm repo add stable https://charts.helm.sh/stable
-brew install docker
 brew install gnupg2
 brew install pinentry-mac
+brew install wireguard-tools
 
 # Wait a bit before moving on...
 sleep 1
@@ -58,12 +58,11 @@ brew tap caskroom/versions
 
 # Install cask packages
 
-brew install --cask --appdir="/Applications" alfred
+brew install --cask --appdir="/Applications" raycast
 brew install --cask --appdir="/Applications" google-chrome
 brew install --cask --appdir="/Applications" slack
 brew install --cask --appdir="/Applications" spotify
 brew install --cask --appdir="/Applications" sublime-text
-brew install --cask --appdir="/Applications" phpstorm
 brew install --cask --appdir="/Applications" tableplus
 brew install --cask --appdir="/Applications" postman
 brew install --cask --appdir="/Applications" forklift
@@ -75,7 +74,15 @@ brew install --cask --appdir="/Applications" hyper
 brew install --cask --appdir="/Applications" apple-juice
 brew install --cask --appdir="/Applications" sourcetree
 brew install --cask --appdir="/Applications" hiddenbar
-brew install --cask --appdir="/Applications" docker
+brew install --cask --appdir="/Applications" lens
+brew install --cask --appdir="/Applications" tinkerwell
+brew install --cask --appdir="/Applications" slack
+brew install --cask --appdir="/Applications" orbstack
+brew install --cask --appdir="/Applications" 1password
+brew install --cask --appdir="/Applications" rocket-chat
+brew install --cask --appdir="/Applications" whatsapp
+brew install --cask --appdir="/Applications" monitorcontrol
+brew install --cask --appdir="/Applications" jetbrains-toolbox
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook qlvideo

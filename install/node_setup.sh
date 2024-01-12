@@ -7,5 +7,3 @@ export NVM_DIR="$HOME/.nvm" && (
 nvm install 6.12 --latest-npm
 nvm install 12 --latest-npm
 nvm install --lts --latest-npm
-
-brew install yarn --without-node

@@ -24,7 +24,6 @@ sub_help () {
     echo "   symlinks         Run symlinks script"
     echo "   brew             Run brew script"
     echo "   node             Run node setup script"
-    echo "   valet            Run valet script"
     echo "   ohmyzsh          Run oh my zsh script"
     echo "   hosts            Run hosts script"
     echo "   defaults         Run MacOS defaults script"
@@ -60,11 +59,6 @@ sub_brew () {
 sub_node () {
     . "$DOTFILES_DIR/install/node_setup.sh"
     echo -e "${GREEN}$ARROW Success! Node setup command finished.${NC}"
-}
-
-sub_valet () {
-    . "$DOTFILES_DIR/install/valet.sh"
-    echo -e "${GREEN}$ARROW Success! Valet command finished.${NC}"
 }
 
 sub_ohmyzsh () {

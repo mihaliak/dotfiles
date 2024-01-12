@@ -48,6 +48,21 @@ function vcomposer() {
     valet composer "$@"
 }
 
+function cat() {
+    bat --theme ansi "$@"
+}
+
+function ghr() {
+    gh repo clone roundly-consulting/$1
+    cd $1
+}
+
+function ghl() {
+    gh repo create roundly-consulting/$1 --private --template spatie/package-skeleton-laravel
+    ghr $1
+    pstorm .
+}
+
 man() {
 	env \
 		LESS_TERMCAP_mb=$(printf "\e[1;31m") \

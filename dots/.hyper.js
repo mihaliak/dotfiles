@@ -9,10 +9,10 @@ module.exports = {
     updateChannel: 'stable',
 
     // default font size in pixels for all tabs
-    fontSize: 16,
+    fontSize: 18,
 
     // font family with optional fallbacks
-    fontFamily: 'Inconsolata, Inconsolata For Powerline, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: 'Source Code Pro, Inconsolata, Inconsolata For Powerline, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
@@ -132,9 +132,8 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    'hyper-tabs-enhanced',
-    'hyper-statusline',
-    'hyper-sierra-vibrancy'
+    'hyper-dracula',
+    'hyper-quit'
   ],
 
   // in development, you can create a directory under
