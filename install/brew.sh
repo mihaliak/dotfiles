@@ -84,6 +84,7 @@ brew install --cask --appdir="/Applications" jetbrains-toolbox
 brew install --cask --appdir="/Applications" telegram
 brew install --cask --appdir="/Applications" appcleaner
 brew install --cask --appdir="/Applications" iina
+brew install --cask --appdir="/Applications" optimage
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook qlvideo
