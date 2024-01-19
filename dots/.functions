@@ -41,7 +41,7 @@ function commit() {
 }
 
 function composer() {
-    /usr/local/bin/php -d memory_limit=-1 /usr/local/bin/composer "$@"
+    /opt/homebrew/bin/php -d memory_limit=-1 /opt/homebrew/bin/composer "$@"
 }
 
 function vcomposer() {
@@ -122,4 +122,8 @@ function xterm_title_preexec () {
 
 function youtube_song () {
     youtube-dl --audio-format m4a -x "$@"
+}
+
+function joke() {
+    echo $(curl -s https://icanhazdadjoke.com)
 }

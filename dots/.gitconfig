@@ -18,16 +18,10 @@
   yolo = !git commit -m \"$(curl -s whatthecommit.com/index.txt)\"
   joke = !git commit -m \"$(curl -s https://icanhazdadjoke.com)\"
   f = !"bash -c 'git checkout -b feature/$0'"
+  o = !"bash -c 'git checkout $0'"
 [pull]
 	rebase = false
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [commit]
-	template = /Users/nipid/.stCommitMsg
 	gpgsign = true
 [init]
   defaultBranch = main

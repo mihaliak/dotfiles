@@ -3,7 +3,6 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(homebrew/bin/brew shellenv)"
 
-brew tap shivammathur/php
 brew update
 brew upgrade
 
@@ -15,9 +14,6 @@ brew install openssl
 brew install tig
 brew install composer
 brew install nmap
-brew install shivammathur/php/php@8.1
-brew install shivammathur/php/php@8.2
-brew install shivammathur/php/php@8.3
 brew install git
 brew install subversion
 brew install python3
@@ -32,7 +28,8 @@ brew install unrar
 brew install wifi-password
 brew install mysql
 brew install potrace
-brew install imagick
+brew install imagemagick
+brew install pkg-config
 brew install autoconf
 brew install pkg-config
 pecl install imagick
@@ -85,6 +82,8 @@ brew install --cask --appdir="/Applications" telegram
 brew install --cask --appdir="/Applications" appcleaner
 brew install --cask --appdir="/Applications" iina
 brew install --cask --appdir="/Applications" optimage
+brew install --cask --appdir="/Applications" notion
+brew install --cask --appdir="/Applications" numi
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook qlvideo
