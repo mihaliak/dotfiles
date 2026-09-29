@@ -23,29 +23,8 @@ function artisan() {
     php artisan "$@"
 }
 
-function vartisan() {
-    valet php artisan "$@"
-}
-
-function commit() {
-    commitMessage="$*"
-
-    git add .
-
-    if [ "$commitMessage" = "" ]; then
-        aicommits
-        return
-    fi
- 
-    eval "git commit -a -m '${commitMessage}'"
-}
-
 function composer() {
-    /opt/homebrew/bin/php -d memory_limit=-1 /opt/homebrew/bin/composer "$@"
-}
-
-function vcomposer() {
-    valet composer "$@"
+    "/Users/andrejmihaliak/Library/Application Support/Herd/bin/php" -d memory_limit=-1 /opt/homebrew/bin/composer "$@"
 }
 
 function cat() {
@@ -58,9 +37,9 @@ function ghr() {
 }
 
 function ghl() {
-    gh repo create roundly-consulting/$1 --private --template spatie/package-skeleton-laravel
+    gh repo create roundly-consulting/$1 --private --template roundly-consulting/package-template-for-laravel
     ghr $1
-    pstorm .
+    subl .
 }
 
 man() {
@@ -118,10 +97,6 @@ function xterm_title_precmd () {
 function xterm_title_preexec () {
     print -Pn '\e]2;'
     print -n "${(q)1}\a"
-}
-
-function youtube_song () {
-    youtube-dl --audio-format m4a -x "$@"
 }
 
 function joke() {

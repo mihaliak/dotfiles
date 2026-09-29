@@ -5,7 +5,7 @@
 	"color_scheme": "Packages/ayu/ayu-light.sublime-color-scheme",
 	"enable_tab_scrolling": false,
 	"font_face": "Source Code Pro",
-	"font_size": 13,
+	"font_size": 14,
 	"highlight_line": true,
 	"ignored_packages":
 	[
@@ -22,4 +22,5 @@
 	"theme": "ayu-light.sublime-theme",
 	"ui_big_tabs": false,
 	"word_wrap": false,
+	"index_files": false,
 }

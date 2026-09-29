@@ -5,5 +5,5 @@
 /brew_components
 .ignored-stuff
 .idea
-
 !.gitkeep
+**/.claude/settings.local.json

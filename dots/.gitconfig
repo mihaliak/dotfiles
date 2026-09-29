@@ -1,7 +1,7 @@
 [user]
 	name = Andrej Mihaliak
 	email = andrej.mihaliak@gmail.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA6XJkv1UW9NY5Ie/L0XZemzXoBtwdVR9zse7hdJIlnl
+	signingkey = EDB03A01921E535E
 [github]
   user = mihaliak
 [core]
@@ -15,6 +15,7 @@
   m = !"bash -c 'git branch | grep -v 'master' | xargs git branch -D'"
   nah = !"bash -c 'git reset --hard && git clean -df'"
   master = checkout master
+  main = checkout main
   yolo = !git commit -m \"$(curl -s whatthecommit.com/index.txt)\"
   joke = !git commit -m \"$(curl -s https://icanhazdadjoke.com)\"
   f = !"bash -c 'git checkout -b feature/$0'"
@@ -26,11 +27,20 @@
 [init]
   defaultBranch = main
 [gpg]
-	format = ssh
-[gpg "ssh"]
-  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+	program = /opt/homebrew/bin/gpg
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[safe]
+	directory = /opt/homebrew/Library/Taps/homebrew/homebrew-core
+	directory = /opt/homebrew/Library/Taps/homebrew/homebrew-cask
+[tag]
+	gpgsign = true
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential

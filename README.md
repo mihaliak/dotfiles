@@ -10,8 +10,8 @@ Contains:
   6. `Source Code Pro` font used in Sublime and Hyper
   7. Hyper config, oh-my-zsh taybalt theme
   8. Packages / CLI (brew, brew cask, dockutil, htop, iftop, openssl, tig, composer, nmap, git, subversion, nvm - node version manager, python3, thefuck, wget, yarn, zsh, zsh-completions, sqlmap, aircrack-ng)
-  9. Applications (raycast, google-chrome, slack, spotify, sublime-text, vlc, jetbrains-toolbox, sequel-pro, filezilla, postman, hyper, teamviewer, spectacle, appcleaner, skype, lens, tinkerwell, orbstack, 1password, rocket-chat, whatsapp)
-  10. [Valet for web development](https://github.com/laravel/valet)
+  9. Applications (raycast, google-chrome, slack, spotify, sublime-text, vlc, jetbrains-toolbox, postman, hyper, teamviewer, spectacle, appcleaner, skype, lens, tinkerwell, orbstack, 1password, rocket-chat, whatsapp)
+  10. [Herd for web development](https://herd.laravel.com/) + [DBngin](https://dbngin.com/)
   11. `dotfiles` binary to manage dotfiles functions with autocomplete
 ## Install
 
@@ -34,8 +34,9 @@ Clone and install dotfiles:
 
 1. Install fonts
 2. Install [Laravel Herd](https://herd.laravel.com/)
-3. `sudo reboot`
-4. Enjoy
+3. Install [DBngin](https://dbngin.com/)
+4. `sudo reboot`
+5. Enjoy
 
 ## The `dotfiles` command
 
